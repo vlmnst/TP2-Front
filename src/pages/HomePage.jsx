@@ -1,14 +1,24 @@
+import { members } from '../data/team';
+import MemberCard from '../components/MemberCard';
+import MessagePanel from '../components/MessagePanel';
+
 function HomePage() {
-  return (
-    <section className="page-section">
-      <p className="section-kicker">Paso 1</p>
-      <h2>Portada en construccion</h2>
-      <p>
-        Esta pagina va a reemplazar el contenido actual de la portada. Tu siguiente objetivo es migrar el hero, la
-        lista de integrantes y el panel de mensajes dinamicos.
-      </p>
-    </section>
-  );
+    return (
+        <div className="container page-stack">
+            <section className="section-heading">
+                <p className="eyebrow">Equipo</p>
+                <h2>Integrantes del proyecto</h2>
+            </section>
+
+            <section className="member-grid">
+                {members.map((member) => (
+                    <MemberCard key={member.id} member={member} />
+                ))}
+            </section>
+
+            <MessagePanel />
+        </div>
+    );
 }
 
 export default HomePage;
