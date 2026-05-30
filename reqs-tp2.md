@@ -1,12 +1,5 @@
 # Checklist de Auditoría - Trabajo Práctico 2
 
-## Entrega y Repositorio
-
-- [ ] Mantener el repositorio del TP2 totalmente independiente del TP1.
-- [ ] Publicar en la planilla de la comisión el enlace al repositorio de GitHub (para revisión de código y README).
-- [ ] Publicar en la planilla el enlace a la aplicación desplegada en Vercel.
-- [ ] Aplicar buenas prácticas en organización, diseño adaptable y control de versiones.
-
 ## Arquitectura y Navegación
 
 - [ ] Migrar la estructura web a una arquitectura basada en componentes con React.
@@ -58,3 +51,11 @@
 - [ ] Uso de IA: Listar todas las herramientas de inteligencia artificial empleadas en el desarrollo.
 - [ ] Explicar específicamente qué textos, problemas de lógica o debugging fueron resueltos con IA.
 - [ ] Indicar el modelo y el criterio del prompt utilizado para generar recursos gráficos como logos o avatares.
+
+
+## Entrega y Repositorio
+
+- [ ] Mantener el repositorio del TP2 totalmente independiente del TP1.
+- [ ] Publicar en la planilla de la comisión el enlace al repositorio de GitHub (para revisión de código y README).
+- [ ] Publicar en la planilla el enlace a la aplicación desplegada en Vercel.
+- [ ] Aplicar buenas prácticas en organización, diseño adaptable y control de versiones.
