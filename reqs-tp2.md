@@ -2,18 +2,18 @@
 
 ## Arquitectura y Navegación
 
-- [ ] Migrar la estructura web a una arquitectura basada en componentes con React.
-- [ ] Implementar el enrutamiento interno utilizando React Router.
+- [x] Migrar la estructura web a una arquitectura basada en componentes con React.
+- [x] Implementar el enrutamiento interno utilizando React Router.
 - [ ] Construir una interfaz central regida por una Sidebar lateral fija con estética de Dashboard.
 - [ ] Integrar en la Sidebar el logo del equipo y el menú de navegación jerarquizado.
 
 ## Vistas y Componentes Principales
 
-- [ ] Dashboard Home: Crear una portada con la presentación del equipo.
-- [ ] Renderizar una grilla dinámica de tarjetas de acceso rápido para cada integrante.
-- [ ] Incluir en cada tarjeta nombre completo y avatar (IA o mascota).
+- [x] Dashboard Home: Crear una portada con la presentación del equipo.
+- [x] Renderizar una grilla dinámica de tarjetas de acceso rápido para cada integrante.
+- [x] Incluir en cada tarjeta nombre completo y avatar (IA o mascota).
 - [ ] Implementar animaciones de entrada y transiciones suaves de carga en el sistema.
-- [ ] Perfil Individual: Desarrollar una vista detallada para cada estudiante.
+- [x] Perfil Individual: Desarrollar una vista detallada para cada estudiante.
 - [ ] Incorporar barras de progreso animadas que reflejen el stack técnico del estudiante.
 - [ ] Implementar un carrusel interactivo con controles manuales para al menos 3 proyectos.
 - [ ] Diseñar una sección de Tech Stack con un mínimo de 5 iconos y efectos visuales.
@@ -51,7 +51,6 @@
 - [ ] Uso de IA: Listar todas las herramientas de inteligencia artificial empleadas en el desarrollo.
 - [ ] Explicar específicamente qué textos, problemas de lógica o debugging fueron resueltos con IA.
 - [ ] Indicar el modelo y el criterio del prompt utilizado para generar recursos gráficos como logos o avatares.
-
 
 ## Entrega y Repositorio
 

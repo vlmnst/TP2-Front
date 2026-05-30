@@ -1,35 +1,57 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { team, members, logEntries } from '../../data/team';
 
-const memberLinks = [1, 2, 3, 4, 5];
+const stats = [
+    { value: members.length, label: 'integrantes' },
+    { value: logEntries.length, label: 'entradas' },
+    { value: '100%', label: 'react' }
+];
 
 function Layout() {
-  return (
-    <div className="site-shell">
-      <header className="site-header">
-        <p className="site-eyebrow">TP2 Frontend</p>
-        <h1>Grupo 2D en React</h1>
-        <p className="site-copy">
-          Base inicial de migracion desde HTML, CSS y JavaScript vanilla hacia una arquitectura de componentes.
-        </p>
-      </header>
+    return (
+        <div className="site-shell">
+            <header className="site-header">
+                <div className="container hero-grid">
+                    <div className="hero-content">
+                        <p className="eyebrow">{team.tagline}</p>
+                        <h1 className="hero-title">{team.name}</h1>
+                        <p className="hero-copy">{team.description}</p>
+                    </div>
+                    <dl className="hero-stats">
+                        {stats.map((stat) => (
+                            <div key={stat.label} className="stat-item">
+                                <dt>{stat.label}</dt>
+                                <dd>{stat.value}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+            </header>
 
-      <nav className="site-nav" aria-label="Principal">
-        <NavLink to="/" end>
-          Inicio
-        </NavLink>
-        <NavLink to="/bitacora">Bitacora</NavLink>
-        {memberLinks.map((memberId) => (
-          <NavLink key={memberId} to={`/integrantes/${memberId}`}>
-            Integrante {memberId}
-          </NavLink>
-        ))}
-      </nav>
+            <nav className="site-nav" aria-label="Navegacion principal">
+                <div className="container nav-list">
+                    <NavLink className="nav-link" to="/" end>Inicio</NavLink>
+                    <NavLink className="nav-link" to="/bitacora">Bitacora</NavLink>
+                    {members.map((member) => (
+                        <NavLink key={member.id} className="nav-link" to={`/integrantes/${member.id}`}>
+                            {member.name}
+                        </NavLink>
+                    ))}
+                </div>
+            </nav>
 
-      <main className="site-main">
-        <Outlet />
-      </main>
-    </div>
-  );
+            <main className="site-main">
+                <Outlet />
+            </main>
+
+            <footer className="site-footer">
+                <div className="container footer-inner">
+                    <p>&copy; 2026 {team.name}</p>
+                    <p>React + Vite + React Router</p>
+                </div>
+            </footer>
+        </div>
+    );
 }
 
 export default Layout;
