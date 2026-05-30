@@ -88,7 +88,7 @@ function MemberPage() {
         <p className="member-headline">{member.headline}</p>
         <ul className="member-facts">
           <li>{member.location}</li>
-          <li>{member.age} anos</li>
+          <li>{member.age} años</li>
           {member.quickFacts.map((fact) => (
             <li key={fact}>{fact}</li>
           ))}
