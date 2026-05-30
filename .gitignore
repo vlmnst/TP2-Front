@@ -2,6 +2,8 @@
 desktop.ini
 **/desktop.ini
 node_modules
+dist
 
 package-lock.json
 .atl
+
