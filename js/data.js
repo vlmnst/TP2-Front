@@ -23,12 +23,12 @@ window.APP_DATA = {
             photo: 'img/foto_perfil_nico.jpg',
             photoClass: 'nico-photo',
             accent: '#2f7a5f',
-            heroCopy: 'Rio Hondo, Santiago del Estero | 31 anos',
+            heroCopy: 'Rio Hondo, Santiago del Estero | 31 años',
             headline: 'Desarrollador en formacion con interes en interfaces claras y proyectos concretos.',
             cardMeta: 'HTML + React | MySQL | Frontend',
             quickFacts: [
                 'Rio Hondo, Santiago del Estero',
-                '31 anos',
+                '31 años',
                 'HTML, CSS, JavaScript, React y MySQL'
             ],
             skills: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'React', 'MySql', 'Trabajo en equipo'],

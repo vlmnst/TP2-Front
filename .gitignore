@@ -1,3 +1,6 @@
 # Windows metadata files
 desktop.ini
 **/desktop.ini
+node_modules
+
+package-lock.json
