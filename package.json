@@ -1,0 +1,31 @@
+{
+  "name": "tp2-front",
+  "version": "1.0.0",
+  "description": "**[🔗 Ver sitio desplegado → tp1-parabellum-devs.vercel.app](https://tp1-parabellum-devs.vercel.app/)**",
+  "homepage": "https://github.com/vlmnst/TP2-Front#readme",
+  "bugs": {
+    "url": "https://github.com/vlmnst/TP2-Front/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlmnst/TP2-Front.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.16.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.14"
+  }
+}
