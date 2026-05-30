@@ -4,10 +4,10 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 
 ## Arquitectura y Navegación
 
-- [ ] 01 - Diseñar `Sidebar` y `Layout` — Definir estructura, comportamiento fijo y área de contenido principal.
-- [ ] 02 - Implementar componente `Sidebar.jsx` — Crear componente React reutilizable e integrarlo en `layout/Layout.jsx`.
-- [ ] 03 - Añadir logo del equipo y menú jerárquico — Incluir asset del logo, items de navegación y submenús.
-- [ ] 04 - Hacer `Sidebar` responsive y fija — Comportamiento en mobile (colapsable) y persistente en escritorio.
+- [x] 01 - Diseñar `Sidebar` y `Layout` — Definir estructura, comportamiento fijo y área de contenido principal.
+- [x] 02 - Implementar componente `Sidebar.jsx` — Crear componente React reutilizable e integrarlo en `layout/Layout.jsx`.
+- [x] 03 - Añadir logo del equipo y menú jerárquico — Incluir asset del logo, items de navegación y submenús.
+- [x] 04 - Hacer `Sidebar` responsive y fija — Comportamiento en mobile (colapsable) y persistente en escritorio.
 
 ## Vistas y Componentes Principales
 
