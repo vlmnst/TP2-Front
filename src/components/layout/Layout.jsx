@@ -1,5 +1,7 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import { team, members, logEntries } from '../../data/team';
+import Sidebar from './Sidebar';
 
 const stats = [
     { value: members.length, label: 'integrantes' },
@@ -8,48 +10,74 @@ const stats = [
 ];
 
 function Layout() {
+    const location = useLocation();
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    useEffect(() => {
+        setIsSidebarOpen(false);
+    }, [location.pathname]);
+
     return (
-        <div className="site-shell">
-            <header className="site-header">
-                <div className="container hero-grid">
-                    <div className="hero-content">
-                        <p className="eyebrow">{team.tagline}</p>
-                        <h1 className="hero-title">{team.name}</h1>
-                        <p className="hero-copy">{team.description}</p>
+        <div className={`site-shell app-shell ${isSidebarOpen ? 'is-sidebar-open' : ''}`}>
+            <Sidebar
+                team={team}
+                members={members}
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
+            />
+
+            <button
+                type="button"
+                className="app-overlay"
+                aria-label="Cerrar menu lateral"
+                onClick={() => setIsSidebarOpen(false)}
+            />
+
+            <div className="app-main-shell">
+                <header className="content-topbar">
+                    <div className="container content-topbar-inner">
+                        <button
+                            type="button"
+                            className="sidebar-toggle"
+                            onClick={() => setIsSidebarOpen((current) => !current)}
+                            aria-expanded={isSidebarOpen}
+                            aria-controls="sidebar-members-list"
+                        >
+                            Menu
+                        </button>
                     </div>
-                    <dl className="hero-stats">
-                        {stats.map((stat) => (
-                            <div key={stat.label} className="stat-item">
-                                <dt>{stat.label}</dt>
-                                <dd>{stat.value}</dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
-            </header>
+                </header>
 
-            <nav className="site-nav" aria-label="Navegacion principal">
-                <div className="container nav-list">
-                    <NavLink className="nav-link" to="/" end>Inicio</NavLink>
-                    <NavLink className="nav-link" to="/bitacora">Bitacora</NavLink>
-                    {members.map((member) => (
-                        <NavLink key={member.id} className="nav-link" to={`/integrantes/${member.id}`}>
-                            {member.name}
-                        </NavLink>
-                    ))}
-                </div>
-            </nav>
+                <section className="content-hero-wrap">
+                    <div className="container hero-grid content-hero-grid">
+                        <div className="hero-content">
+                            <p className="eyebrow">Arquitectura y navegacion</p>
+                            <h2 className="hero-title content-hero-title">{team.name}</h2>
+                            <p className="hero-copy">{team.description}</p>
+                        </div>
 
-            <main className="site-main">
-                <Outlet />
-            </main>
+                        <dl className="hero-stats">
+                            {stats.map((stat) => (
+                                <div key={stat.label} className="stat-item">
+                                    <dt>{stat.label}</dt>
+                                    <dd>{stat.value}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
+                </section>
 
-            <footer className="site-footer">
-                <div className="container footer-inner">
-                    <p>&copy; 2026 {team.name}</p>
-                    <p>React + Vite + React Router</p>
-                </div>
-            </footer>
+                <main className="site-main">
+                    <Outlet />
+                </main>
+
+                <footer className="site-footer">
+                    <div className="container footer-inner">
+                        <p>&copy; 2026 {team.name}</p>
+                        <p>React + Vite + React Router</p>
+                    </div>
+                </footer>
+            </div>
         </div>
     );
 }
