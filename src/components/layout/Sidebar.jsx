@@ -95,6 +95,11 @@ function Sidebar({ team, members, isOpen, onClose }) {
                         <NavLink className="sidebar-link" to="/galeria" onClick={onClose}>
                             <span>Galería de Imágenes</span>
                         </NavLink>
+
+                        <NavLink className="sidebar-link" to="/met" onClick={onClose}>
+                            <span>Museo MET</span>
+                            <small>Busqueda viva y archivo visual</small>
+                        </NavLink>
                     </div>
                 </nav>
             </div>
