@@ -11,11 +11,11 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 
 ## Vistas y Componentes Principales
 
-- [ ] 05 - Agregar animaciones de entrada y transiciones suaves — Definir patrón (CSS/Framer Motion), aplicarlas a tarjetas y vistas.
-- [ ] 06 - Implementar `ProgressBar` animada — Componente reutilizable para mostrar el stack técnico en `MemberPage.jsx`.
-- [ ] 07 - Crear `Carousel` de proyectos con controles manuales — Componente accesible con al menos 3 proyectos y botones prev/next.
-- [ ] 08 - Desarrollar `TechStack` con >=5 iconos y efectos visuales — Diseñar íconos, layout y microinteracciones (hover/entrada).
-- [ ] 09 - Añadir `SocialButtons` con efectos hover avanzados — Botones para redes con cambios de color, escala o sombra.
+- [X] 05 - Agregar animaciones de entrada y transiciones suaves — Definir patrón (CSS/Framer Motion), aplicarlas a tarjetas y vistas.
+- [X] 06 - Implementar `ProgressBar` animada — Componente reutilizable para mostrar el stack técnico en `MemberPage.jsx`.
+- [X] 07 - Crear `Carousel` de proyectos con controles manuales — Componente accesible con al menos 3 proyectos y botones prev/next.
+- [X] 08 - Desarrollar `TechStack` con >=5 iconos y efectos visuales — Diseñar íconos, layout y microinteracciones (hover/entrada).
+- [X] 09 - Añadir `SocialButtons` con efectos hover avanzados — Botones para redes con cambios de color, escala o sombra.
 
 ## Lógica de Datos e Integración
 
