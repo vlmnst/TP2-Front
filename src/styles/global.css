@@ -1412,6 +1412,7 @@ img {
     color: var(--color-ink);
 }
 
+
 /* ── Footer ── */
 
 .site-footer {
@@ -1482,6 +1483,44 @@ img {
 
 .tech-item:hover .tech-label {
     color: var(--member-accent, var(--color-primary));
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    border: 1.5px solid var(--color-line);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-muted);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.social-btn svg {
+    font-size: 1.15rem;
+    transition: transform 180ms ease;
+}
+
+.social-btn:hover {
+    background: var(--member-accent, var(--color-primary));
+    border-color: var(--member-accent, var(--color-primary));
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn:hover svg {
+    transform: rotate(-8deg) scale(1.15);
 }
 
 /* ── Responsive ── */

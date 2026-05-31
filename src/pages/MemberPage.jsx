@@ -24,19 +24,19 @@ function MemberPage() {
 
     return (
         <div className="container profile-layout" style={{ '--member-accent': member.accent }}>
-        <ProfileAside member={member} />
+            <ProfileAside member={member} />
 
-        <article className="profile-card profile-card-portfolio">
-            {member.progress && <SectionRenderer section={member.progress} />}
-            {member.sections.map((section, i) => (
-                <>
-                    <SectionRenderer key={i} section={section} />
-                    {section.type === 'focus' && memberData?.techStack?.length > 0 && (
-                        <TechStack items={memberData.techStack} />
-                    )}
-                </>
-            ))}
-        </article>
+            <article className="profile-card profile-card-portfolio">
+                {member.progress && <SectionRenderer section={member.progress} />}
+                {member.sections.map((section, i) => (
+                    <>
+                        <SectionRenderer key={i} section={section} />
+                        {section.type === 'focus' && memberData?.techStack?.length > 0 && (
+                            <TechStack items={memberData.techStack} />
+                        )}
+                    </>
+                ))}
+            </article>
         </div>
     );
 }

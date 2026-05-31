@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SocialButtons from './SocialButtons';
 
 const FILTERS = [
     { filter: 'none', borderColor: '#ffffff' },
@@ -76,21 +77,7 @@ function ProfileAside({ member }) {
                 Cambiar estilo
             </button>
 
-            {member.links && (
-                <div className="profile-links">
-                    {member.links.map((link) => (
-                        <a
-                            key={link.href}
-                            className="button button-light"
-                            href={link.href}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                        >
-                            {link.label}
-                        </a>
-                    ))}
-                </div>
-            )}
+            <SocialButtons links={member.links ?? []} />
         </aside>
     );
 }
