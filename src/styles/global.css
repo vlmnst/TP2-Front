@@ -1884,6 +1884,27 @@ img {
     box-shadow: 0 20px 36px rgba(31, 37, 40, 0.12);
 }
 
+.met-card-shell {
+    min-height: 16rem;
+    background:
+        radial-gradient(circle at top right, rgba(196, 81, 59, 0.12), transparent 11rem),
+        linear-gradient(145deg, #182124, #253733 62%, #31443f);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.met-card-shell:hover,
+.met-card-shell:focus-visible {
+    border-color: rgba(174, 224, 201, 0.28);
+}
+
+.met-card-shell.is-revealed {
+    background:
+        radial-gradient(circle at top right, rgba(194, 239, 213, 0.22), transparent 11rem),
+        linear-gradient(145deg, #1e332c, #2d4a40 62%, #42695b);
+    border-color: rgba(194, 239, 213, 0.32);
+    box-shadow: 0 18px 34px rgba(40, 91, 71, 0.18);
+}
+
 .met-card-media {
     aspect-ratio: 4 / 5;
     background: linear-gradient(135deg, #182124, #31433f);
@@ -1927,14 +1948,42 @@ img {
     padding: 1rem;
 }
 
+.met-card-copy-shell {
+    height: 100%;
+    align-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.met-card-kicker {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #aee0c9;
+}
+
+.met-card-shell.is-revealed .met-card-id {
+    color: #f0fff7;
+}
+
+.met-card-shell.is-revealed .met-card-prompt {
+    color: rgba(232, 255, 241, 0.82);
+}
+
+.met-card-shell.is-revealed .met-card-kicker {
+    color: #f2c67c;
+}
+
 .met-card-id {
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.05rem;
-    line-height: 1.1;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    line-height: 1;
 }
 
 .met-card-prompt {
-    color: var(--color-muted);
+    color: rgba(255, 255, 255, 0.66);
     font-size: 0.88rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1984,14 +2033,16 @@ img {
     background: rgba(24, 33, 36, 0.06);
 }
 
-.met-modal-no-image {
-    min-height: 24rem;
-    padding: 2rem;
-}
-
 .met-modal-img {
+    width: 100%;
     height: 100%;
     max-height: 78vh;
+    object-fit: cover;
+}
+
+.met-modal-img.is-placeholder {
+    background: linear-gradient(135deg, rgba(24, 33, 36, 0.08), rgba(47, 122, 95, 0.12));
+    object-fit: cover;
 }
 
 .met-modal-copy {
@@ -2010,6 +2061,15 @@ img {
 .met-modal-summary {
     color: var(--color-muted);
     font-size: 1rem;
+}
+
+.met-modal-image-note {
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(47, 122, 95, 0.18);
+    border-radius: 16px;
+    background: rgba(47, 122, 95, 0.08);
+    color: #355347;
+    font-size: 0.96rem;
 }
 
 .met-modal-details {
@@ -2052,6 +2112,73 @@ img {
 
 .met-modal-state-error {
     border: 1px solid rgba(196, 81, 59, 0.22);
+}
+
+.met-unlock-overlay {
+    z-index: 110;
+    padding: 2rem;
+}
+
+.met-unlock-card {
+    display: grid;
+    gap: 0.85rem;
+    width: min(100%, 30rem);
+    padding: 1.5rem;
+    border: 1px solid rgba(174, 224, 201, 0.16);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at top right, rgba(196, 81, 59, 0.14), transparent 14rem),
+        linear-gradient(145deg, rgba(24, 33, 36, 0.98), rgba(38, 55, 50, 0.96));
+    color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 26px 50px rgba(0, 0, 0, 0.34);
+    animation: met-unlock-pop 220ms ease;
+}
+
+.met-unlock-card h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1;
+}
+
+.met-unlock-copy {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+.met-unlock-bar {
+    position: relative;
+    height: 0.9rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.met-unlock-bar span {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #aee0c9, #f2c67c, #c4513b);
+    transform-origin: left center;
+    animation: met-unlock-fill 620ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes met-unlock-pop {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes met-unlock-fill {
+    from {
+        transform: scaleX(0.02);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
 
 /* ── Responsive ── */

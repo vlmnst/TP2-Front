@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+const MET_PLACEHOLDER_IMAGE = '/img/met-placeholder.svg';
+
 function DetailRow({ label, value }) {
     if (!value) {
         return null;
@@ -25,6 +27,12 @@ function MetArtworkModal({ artwork, isLoading, error, onClose }) {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [onClose]);
 
+    const hasArtworkImage = Boolean(artwork?.primaryImageSmall || artwork?.primaryImage);
+    const imageSrc = artwork?.primaryImageSmall || artwork?.primaryImage || MET_PLACEHOLDER_IMAGE;
+    const imageAlt = hasArtworkImage
+        ? artwork?.title
+        : `Placeholder de archivo para ${artwork?.title || 'obra sin imagen disponible'}`;
+
     return (
         <div className="lightbox-overlay met-modal-overlay" onClick={onClose}>
             <button className="lightbox-close" onClick={onClose} aria-label="Cerrar">
@@ -46,18 +54,11 @@ function MetArtworkModal({ artwork, isLoading, error, onClose }) {
                 ) : artwork ? (
                     <>
                         <div className="met-modal-media">
-                            {artwork.primaryImage || artwork.primaryImageSmall ? (
-                                <img
-                                    className="lightbox-img met-modal-img"
-                                    src={artwork.primaryImage || artwork.primaryImageSmall}
-                                    alt={artwork.title}
-                                />
-                            ) : (
-                                <div className="met-modal-no-image">
-                                    <p className="eyebrow">Sin reproduccion</p>
-                                    <h3>La obra no tiene imagen ampliada disponible</h3>
-                                </div>
-                            )}
+                            <img
+                                className={`lightbox-img met-modal-img ${hasArtworkImage ? '' : 'is-placeholder'}`}
+                                src={imageSrc}
+                                alt={imageAlt}
+                            />
                         </div>
 
                         <div className="met-modal-copy">

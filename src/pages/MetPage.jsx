@@ -13,34 +13,59 @@ function normalizeImageUrl(value) {
     return normalized ? normalized : null;
 }
 
-function buildSearchUrl({ query, mode, yearFrom, yearTo }) {
+function parseYearInput(value) {
+    const normalized = value.trim();
+
+    if (normalized === '' || !/^-?\d+$/.test(normalized)) {
+        return null;
+    }
+
+    return Math.min(YEAR_MAX, Math.max(YEAR_MIN, Number(normalized)));
+}
+
+function buildSearchParams({ query, yearFrom, yearTo }) {
     const params = new URLSearchParams({
         q: query.trim() || DEFAULT_QUERY,
         hasImages: 'true',
     });
 
-    if (mode === 'title') {
+    const normalizedFrom = parseYearInput(yearFrom);
+    const normalizedTo = parseYearInput(yearTo);
+
+    if (normalizedFrom !== null || normalizedTo !== null) {
+        const dateBegin = normalizedFrom ?? normalizedTo;
+        const dateEnd = normalizedTo ?? normalizedFrom;
+
+        params.set('dateBegin', String(Math.min(dateBegin, dateEnd)));
+        params.set('dateEnd', String(Math.max(dateBegin, dateEnd)));
+    }
+
+    return params;
+}
+
+function buildSearchUrl(filters, scope = 'all') {
+    const params = buildSearchParams(filters);
+
+    if (scope === 'title') {
         params.set('title', 'true');
     }
 
-    if (mode === 'artist') {
+    if (scope === 'artist') {
         params.set('artistOrCulture', 'true');
     }
 
-    const hasFrom = yearFrom.trim() !== '';
-    const hasTo = yearTo.trim() !== '';
+    return `${API_BASE}/search?${params.toString()}`;
+}
 
-    if (hasFrom || hasTo) {
-        const normalizedFrom = hasFrom ? Number(yearFrom) : YEAR_MIN;
-        const normalizedTo = hasTo ? Number(yearTo) : YEAR_MAX;
-        const dateBegin = Math.min(normalizedFrom, normalizedTo);
-        const dateEnd = Math.max(normalizedFrom, normalizedTo);
+async function fetchSearchIds(filters, scope, signal) {
+    const response = await fetch(buildSearchUrl(filters, scope), { signal });
 
-        params.set('dateBegin', String(dateBegin));
-        params.set('dateEnd', String(dateEnd));
+    if (!response.ok) {
+        throw new Error('No se pudo consultar la API del MET.');
     }
 
-    return `${API_BASE}/search?${params.toString()}`;
+    const data = await response.json();
+    return data.objectIDs || [];
 }
 
 function normalizeArtwork(artwork) {
@@ -75,11 +100,11 @@ function MetPage() {
     });
     const [resultIds, setResultIds] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageItems, setPageItems] = useState([]);
     const [cache, setCache] = useState({});
     const [isSearching, setIsSearching] = useState(false);
-    const [isLoadingPage, setIsLoadingPage] = useState(false);
     const [error, setError] = useState('');
+    const [unlockingId, setUnlockingId] = useState(null);
+    const [revealedIds, setRevealedIds] = useState([]);
     const [selectedId, setSelectedId] = useState(null);
     const [selectedArtwork, setSelectedArtwork] = useState(null);
     const [isModalLoading, setIsModalLoading] = useState(false);
@@ -95,7 +120,25 @@ function MetPage() {
 
     useEffect(() => {
         setCurrentPage(1);
+        setUnlockingId(null);
+        setSelectedId(null);
     }, [debouncedFilters]);
+
+    useEffect(() => {
+        if (unlockingId === null) {
+            return undefined;
+        }
+
+        const timeoutId = window.setTimeout(() => {
+            setRevealedIds((currentIds) => (
+                currentIds.includes(unlockingId) ? currentIds : [...currentIds, unlockingId]
+            ));
+            setSelectedId(unlockingId);
+            setUnlockingId(null);
+        }, 620);
+
+        return () => window.clearTimeout(timeoutId);
+    }, [unlockingId]);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -105,16 +148,31 @@ function MetPage() {
             setError('');
 
             try {
-                const response = await fetch(buildSearchUrl(debouncedFilters), {
-                    signal: controller.signal,
-                });
+                const trimmedQuery = debouncedFilters.query.trim();
+                let nextIds = [];
 
-                if (!response.ok) {
-                    throw new Error('No se pudo consultar la API del MET.');
+                if (debouncedFilters.mode === 'artist') {
+                    nextIds = await fetchSearchIds(debouncedFilters, 'artist', controller.signal);
+                } else if (trimmedQuery) {
+                    const [artistIds, titleIds] = await Promise.all([
+                        fetchSearchIds(debouncedFilters, 'artist', controller.signal),
+                        fetchSearchIds(debouncedFilters, 'title', controller.signal),
+                    ]);
+
+                    nextIds = [...new Set([...artistIds, ...titleIds])];
+
+                    if (nextIds.length === 0) {
+                        nextIds = await fetchSearchIds(debouncedFilters, 'all', controller.signal);
+                    }
+                } else {
+                    nextIds = await fetchSearchIds(debouncedFilters, 'all', controller.signal);
                 }
 
-                const data = await response.json();
-                setResultIds(data.objectIDs || []);
+                setResultIds(
+                    trimmedQuery
+                        ? nextIds.slice()
+                        : nextIds.slice().sort((left, right) => left - right)
+                );
             } catch (searchError) {
                 if (searchError.name !== 'AbortError') {
                     setResultIds([]);
@@ -133,67 +191,9 @@ function MetPage() {
     }, [debouncedFilters]);
 
     const totalPages = Math.max(1, Math.ceil(resultIds.length / ITEMS_PER_PAGE));
-
-    useEffect(() => {
-        const controller = new AbortController();
+    const pageIds = useMemo(() => {
         const start = (currentPage - 1) * ITEMS_PER_PAGE;
-        const visibleIds = resultIds.slice(start, start + ITEMS_PER_PAGE);
-
-        if (visibleIds.length === 0) {
-            setPageItems([]);
-            return () => controller.abort();
-        }
-
-        async function loadPageItems() {
-            setIsLoadingPage(true);
-
-            try {
-                const fetchedItems = await Promise.all(
-                    visibleIds.map(async (objectId) => {
-                        if (cache[objectId]) {
-                            return cache[objectId];
-                        }
-
-                        const response = await fetch(`${API_BASE}/objects/${objectId}`, {
-                            signal: controller.signal,
-                        });
-
-                        if (!response.ok) {
-                            throw new Error(`No se pudo traer la obra ${objectId}.`);
-                        }
-
-                        return normalizeArtwork(await response.json());
-                    })
-                );
-
-                const nextCache = {};
-
-                fetchedItems.forEach((artwork) => {
-                    nextCache[artwork.objectID] = artwork;
-                });
-
-                if (Object.keys(nextCache).length > 0) {
-                    setCache((currentCache) => ({
-                        ...currentCache,
-                        ...nextCache,
-                    }));
-                }
-                setPageItems(fetchedItems);
-            } catch (pageError) {
-                if (pageError.name !== 'AbortError') {
-                    setPageItems([]);
-                    setError('Los resultados aparecieron, pero no se pudieron renderizar las miniaturas.');
-                }
-            } finally {
-                if (!controller.signal.aborted) {
-                    setIsLoadingPage(false);
-                }
-            }
-        }
-
-        loadPageItems();
-
-        return () => controller.abort();
+        return resultIds.slice(start, start + ITEMS_PER_PAGE);
     }, [currentPage, resultIds]);
 
     useEffect(() => {
@@ -251,24 +251,24 @@ function MetPage() {
 
     const resultSummary = useMemo(() => {
         if (isSearching) {
-            return 'Consultando expedientes del museo...';
+            return 'Ordenando expedientes del museo...';
         }
 
         if (error) {
             return error;
         }
 
-        return `${resultIds.length} obras encontradas`;
+        return `${resultIds.length} expedientes encontrados`;
     }, [error, isSearching, resultIds.length]);
 
     return (
         <div className="container page-stack met-page">
             <section className="section-heading met-heading">
-                <p className="eyebrow">Coleccion interactiva</p>
-                <h2>Museo MET</h2>
+                <p className="eyebrow">Archivo interactivo</p>
+                <h2>Archivo / Expedientes</h2>
                 <p className="met-intro">
-                    Explora la coleccion del Metropolitan Museum of Art con una busqueda por artista o titulo,
-                    filtra por rango de creacion y abre cada obra como si fuera un expediente reservado.
+                    Recorre el archivo del MET como una mesa de expedientes: busca por artista, cultura o palabra clave,
+                    filtra por rango de creacion y desbloquea cada registro para revelar la obra.
                 </p>
             </section>
 
@@ -286,8 +286,7 @@ function MetPage() {
                 <label className="met-field">
                     <span>Buscar en</span>
                     <select value={mode} onChange={(event) => setMode(event.target.value)}>
-                        <option value="all">Todo</option>
-                        <option value="title">Titulo</option>
+                        <option value="all">Artista o titulo</option>
                         <option value="artist">Artista o cultura</option>
                     </select>
                 </label>
@@ -298,7 +297,7 @@ function MetPage() {
                         type="number"
                         value={yearFrom}
                         onChange={(event) => setYearFrom(event.target.value)}
-                        placeholder="-4000"
+                        placeholder="1889"
                     />
                 </label>
 
@@ -308,50 +307,44 @@ function MetPage() {
                         type="number"
                         value={yearTo}
                         onChange={(event) => setYearTo(event.target.value)}
-                        placeholder={String(YEAR_MAX)}
+                        placeholder="1905"
                     />
                 </label>
             </section>
 
             <section className="met-status-row">
                 <p className="met-status">{resultSummary}</p>
-                <p className="met-status met-status-muted">12 expedientes por pagina</p>
+                <p className="met-status met-status-muted">
+                    12 expedientes por pagina. Si completas un solo año, se toma como fecha puntual.
+                </p>
             </section>
 
-            {isLoadingPage ? (
+            {isSearching ? (
                 <section className="met-grid met-grid-skeleton" aria-label="Cargando resultados">
                     {Array.from({ length: ITEMS_PER_PAGE }).map((_, index) => (
                         <div key={index} className="met-card met-card-skeleton" />
                     ))}
                 </section>
-            ) : pageItems.length > 0 ? (
+            ) : pageIds.length > 0 ? (
                 <section className="met-grid" aria-label="Resultados del museo">
-                    {pageItems.map((artwork, index) => (
+                    {pageIds.map((objectId, index) => (
                         <button
-                            key={artwork.objectID}
+                            key={objectId}
                             type="button"
-                            className="met-card"
+                            className={`met-card met-card-shell ${revealedIds.includes(objectId) ? 'is-revealed' : ''}`}
                             style={{ '--animation-delay': `${index * 45}ms` }}
-                            onClick={() => setSelectedId(artwork.objectID)}
+                            onClick={() => setUnlockingId(objectId)}
                         >
-                            <div className="met-card-media">
-                                {artwork.primaryImageSmall ? (
-                                    <img
-                                        src={artwork.primaryImageSmall}
-                                        alt={artwork.title}
-                                        className="met-card-image"
-                                        loading="lazy"
-                                    />
-                                ) : (
-                                    <div className="met-card-image met-card-image-fallback" aria-hidden="true">
-                                        <span>MET #{artwork.objectID}</span>
-                                    </div>
-                                )}
-                            </div>
-
-                            <div className="met-card-copy">
-                                <span className="met-card-id">Object ID #{artwork.objectID}</span>
-                                <span className="met-card-prompt">Abrir expediente</span>
+                            <div className="met-card-copy met-card-copy-shell">
+                                <span className="met-card-kicker">
+                                    {revealedIds.includes(objectId) ? 'Expediente revelado' : 'Archivo reservado'}
+                                </span>
+                                <span className="met-card-id">Numero de obra: #{objectId}</span>
+                                <span className="met-card-prompt">
+                                    {revealedIds.includes(objectId)
+                                        ? 'Click para revisar nuevamente'
+                                        : 'Click para desbloquear la obra'}
+                                </span>
                             </div>
                         </button>
                     ))}
@@ -369,6 +362,19 @@ function MetPage() {
                 totalPages={totalPages}
                 onPageChange={(page) => setCurrentPage(page)}
             />
+
+            {unlockingId !== null ? (
+                <div className="lightbox-overlay met-unlock-overlay">
+                    <div className="met-unlock-card">
+                        <p className="eyebrow">Desbloqueando expediente</p>
+                        <h3>Object ID #{unlockingId}</h3>
+                        <div className="met-unlock-bar" aria-hidden="true">
+                            <span />
+                        </div>
+                        <p className="met-unlock-copy">Recuperando imagen y metadatos del archivo central...</p>
+                    </div>
+                </div>
+            ) : null}
 
             {selectedId !== null ? (
                 <MetArtworkModal

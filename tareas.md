@@ -29,5 +29,3 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 - [x] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
 
 ---
-
-Si querés, empiezo implementando una de estas tareas (por ejemplo, crear `Sidebar.jsx` o el `JsonExplorer`). ¿Cuál preferís que haga primero?
