@@ -4,6 +4,7 @@ import BitacoraPage from '../pages/BitacoraPage';
 import HomePage from '../pages/HomePage';
 import MemberPage from '../pages/MemberPage';
 import NotFoundPage from '../pages/NotFoundPage';
+import GalleryPage from '../pages/GalleryPage';
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: 'integrantes/:memberId',
         element: <MemberPage />,
+      },
+      {
+        path: 'galeria',
+        element: <GalleryPage />,
       },
     ],
     errorElement: <NotFoundPage />,
