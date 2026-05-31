@@ -84,6 +84,12 @@ function Sidebar({ team, members, isOpen, onClose }) {
                             </div>
                         ) : null}
                     </div>
+
+                    <div className="sidebar-group">
+                        <NavLink className="sidebar-link" to="/galeria" onClick={onClose}>
+                            <span>Galería de Imágenes</span>
+                        </NavLink>
+                    </div>
                 </nav>
             </div>
         </aside>

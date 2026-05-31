@@ -1,45 +1,42 @@
 import { useEffect } from 'react';
 
-function Lightbox({ images, currentIndex, onClose, onPrev, onNext }) {
+export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
     useEffect(() => {
-        function handleKey(e) {
+        const handleKeyDown = (e) => {
             if (e.key === 'Escape') onClose();
-            if (e.key === 'ArrowLeft') onPrev();
             if (e.key === 'ArrowRight') onNext();
-        }
-        window.addEventListener('keydown', handleKey);
-        return () => window.removeEventListener('keydown', handleKey);
-    }, [onClose, onPrev, onNext]);
+            if (e.key === 'ArrowLeft') onPrev();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [onClose, onNext, onPrev]);
 
-    const image = images[currentIndex];
+    if (currentIndex === null) return null;
 
     return (
         <div className="lightbox-overlay" onClick={onClose}>
             <button className="lightbox-close" onClick={onClose} aria-label="Cerrar">✕</button>
 
-            <button
-                className="lightbox-nav lightbox-prev"
-                onClick={(e) => { e.stopPropagation(); onPrev(); }}
-                aria-label="Anterior"
-            >
-                ‹
-            </button>
-
             <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-                <img src={image.url} alt={image.alt} className="lightbox-img" />
-                <p className="lightbox-caption">{image.alt}</p>
-                <p className="lightbox-counter">{currentIndex + 1} / {images.length}</p>
-            </div>
+                <div className="lightbox-main">
+                    <button className="lightbox-nav lightbox-prev" onClick={onPrev} aria-label="Anterior">‹</button>
 
-            <button
-                className="lightbox-nav lightbox-next"
-                onClick={(e) => { e.stopPropagation(); onNext(); }}
-                aria-label="Siguiente"
-            >
-                ›
-            </button>
+                    <div className="lightbox-img-wrapper">
+                        <img
+                            src={images[currentIndex].url}
+                            alt={images[currentIndex].alt}
+                            className="lightbox-img"
+                        />
+                    </div>
+
+                    <button className="lightbox-nav lightbox-next" onClick={onNext} aria-label="Siguiente">›</button>
+                </div>
+
+                <div className="lightbox-footer">
+                    <p className="lightbox-caption">{images[currentIndex].alt}</p>
+                    <p className="lightbox-counter">{currentIndex + 1} / {images.length}</p>
+                </div>
+            </div>
         </div>
     );
 }
-
-export default Lightbox;
