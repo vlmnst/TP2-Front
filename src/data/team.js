@@ -110,12 +110,11 @@ export const members = [
             title: 'Stack tecnico',
             accent: '#c4513b',
             items: [
-                { label: 'JavaScript', value: 92 },
-                { label: 'TypeScript', value: 86 },
-                { label: 'Node.js', value: 82 },
-                { label: 'AWS', value: 78 },
+                { label: 'TypeScript', value: 80 },
+                { label: 'Node.js', value: 89 },
+                { label: 'AWS', value: 45 },
                 { label: 'MySQL', value: 72 },
-                { label: 'Snowflake', value: 68 }
+                { label: 'Snowflake', value: 56 }
             ]
         },
         sections: [
@@ -179,22 +178,22 @@ export const members = [
             },
             {
                 type: 'projects',
-                title: 'Proyectos destacados',
+                title: 'Nuevas features en plataforma de comercios',
                 items: [
                     {
-                        name: 'Proyecto 1',
-                        description: 'Simulacion de un dashboard con componentes responsivos y cards.',
-                        tech: 'React, CSS, useState'
+                        name: 'Gestión de donaciones',
+                        description: 'El stakeholder necesitaba una forma de gestionar las donaciones recibidas por su ONG y la creacion de nuevas campañas. Se construyó una aplicacion web con un panel administrativo para registrar cada donacion, visualizar el historial y generar reportes mensuales. ',
+                        tech: 'Node.js, AWS Lambda, API Gateway, DBeaver, MySQL'
                     },
                     {
-                        name: 'Proyecto 2',
-                        description: 'Formulario interactivo con validacion y estado local.',
-                        tech: 'React, Formik, CSS'
+                        name: 'Modulo de legales',
+                        description: 'Cada comercio necesitaba una forma de aceptar los terminos y condiciones de cada servicio, y el equipo queria una forma de centralizar la logica de aceptacion y versionado. Se construyo un modulo de legales con un panel para crear nuevos documentos, versionarlos y asignarlos a cada servicio. El modulo se integro con el sistema de autenticacion para registrar la aceptacion de cada usuario.',
+                        tech: 'Node.js, AWS Lambda, API Gateway, S3, OpenSearch'
                     },
                     {
-                        name: 'Proyecto 3',
-                        description: 'Pagina de perfil con secciones dinamicas y data mock.',
-                        tech: 'React, Router, JS'
+                        name: 'Envío de emails diarios por desconocimiento de compras.',
+                        description: 'Los comercios tenian que ser notificados diariamente de las compras desconocidas en su plataforma, lo que se hacia manualmente a traves de un reporte generado por el equipo de soporte. Se automatizo el proceso construyendo una funcion serverless que se ejecuta diariamente, consulta las compras desconocidas y envia un email con el detalle a cada comercio.',
+                        tech: 'Node.js, AWS Lambda, API Gateway, SQS, Cron'
                     }
                 ]
             },
