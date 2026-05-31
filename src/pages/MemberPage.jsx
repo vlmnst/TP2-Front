@@ -24,6 +24,7 @@ function MemberPage() {
             <ProfileAside member={member} />
 
             <article className="profile-card profile-card-portfolio">
+                {member.progress && <SectionRenderer section={member.progress} />}
                 {member.sections.map((section, i) => (
                     <SectionRenderer key={i} section={section} />
                 ))}

@@ -59,6 +59,27 @@ export const members = [
                 items: ['Green River', 'Californication', 'Magos, espadas y rosas']
             },
             {
+                type: 'projects',
+                title: 'Proyectos destacados',
+                items: [
+                    {
+                        name: 'Proyecto 1',
+                        description: 'Simulacion de una app de gestion con componentes modulares y navega- cion interna.',
+                        tech: 'React, CSS, Vite'
+                    },
+                    {
+                        name: 'Proyecto 2',
+                        description: 'Landing page adaptativa con animaciones suaves y botones interactivos.',
+                        tech: 'HTML, CSS, JavaScript'
+                    },
+                    {
+                        name: 'Proyecto 3',
+                        description: 'Mini herramienta de seguimiento con estados y mock de datos locales.',
+                        tech: 'React, Hooks, Routing'
+                    }
+                ]
+            },
+            {
                 type: 'extra',
                 text: 'Su perfil combina curiosidad tecnica con ganas de seguir creciendo en proyectos reales, especialmente donde pueda practicar frontend, ordenar contenido y mejorar la experiencia visual.'
             }
@@ -84,6 +105,19 @@ export const members = [
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/valeria-mansueto-dev/' }
         ],
         skills: ['JavaScript', 'TypeScript', 'Node.js', 'AWS', 'MySQL', 'Snowflake'],
+        progress: {
+            type: 'progress',
+            title: 'Stack tecnico',
+            accent: '#c4513b',
+            items: [
+                { label: 'JavaScript', value: 92 },
+                { label: 'TypeScript', value: 86 },
+                { label: 'Node.js', value: 82 },
+                { label: 'AWS', value: 78 },
+                { label: 'MySQL', value: 72 },
+                { label: 'Snowflake', value: 68 }
+            ]
+        },
         sections: [
             {
                 type: 'intro',
@@ -144,6 +178,27 @@ export const members = [
                 ]
             },
             {
+                type: 'projects',
+                title: 'Proyectos destacados',
+                items: [
+                    {
+                        name: 'Proyecto 1',
+                        description: 'Simulacion de un dashboard con componentes responsivos y cards.',
+                        tech: 'React, CSS, useState'
+                    },
+                    {
+                        name: 'Proyecto 2',
+                        description: 'Formulario interactivo con validacion y estado local.',
+                        tech: 'React, Formik, CSS'
+                    },
+                    {
+                        name: 'Proyecto 3',
+                        description: 'Pagina de perfil con secciones dinamicas y data mock.',
+                        tech: 'React, Router, JS'
+                    }
+                ]
+            },
+            {
                 type: 'extra',
                 text: 'Estoy completamente comprometida con mi trabajo y me aseguro de brindar lo mejor de mi. Si buscas a alguien capaz de ofrecer soluciones innovadoras y de calidad, estare encantada de trabajar junto a vos.'
             }
@@ -163,6 +218,17 @@ export const members = [
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/antonellamasini' }
         ],
         skills: ['Comunicacion', 'Diseno visual', 'Testing manual', 'Desarrollo movil'],
+        progress: {
+            type: 'progress',
+            title: 'Stack tecnico',
+            accent: '#fb8f14',
+            items: [
+                { label: 'Comunicacion', value: 92 },
+                { label: 'Diseno visual', value: 88 },
+                { label: 'Testing manual', value: 74 },
+                { label: 'Desarrollo movil', value: 68 }
+            ]
+        },
         sections: [
             {
                 type: 'intro',
@@ -207,6 +273,27 @@ export const members = [
                 ]
             },
             {
+                type: 'projects',
+                title: 'Proyectos destacados',
+                items: [
+                    {
+                        name: 'Proyecto 1',
+                        description: 'Simulacion de sitio web educativo con secciones y tarjetas informativas.',
+                        tech: 'React, CSS, HTML'
+                    },
+                    {
+                        name: 'Proyecto 2',
+                        description: 'Panel de presentación con animaciones simples y texto explicativo.',
+                        tech: 'React, Transiciones CSS'
+                    },
+                    {
+                        name: 'Proyecto 3',
+                        description: 'Lista de tareas con estados y botones de accion.',
+                        tech: 'React, useState'
+                    }
+                ]
+            },
+            {
                 type: 'extra',
                 text: 'Me interesa particularmente el testing y el diseno, y aunque me cueste bastante este nuevo mundo, siempre estoy dispuesta a aprender cosas nuevas.'
             }
@@ -233,6 +320,19 @@ export const members = [
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/guillermo-novillo-551367144/' }
         ],
         skills: ['Python', 'JavaScript', 'C#', 'SQL', 'Node.js', 'Electron'],
+        progress: {
+            type: 'progress',
+            title: 'Stack tecnico',
+            accent: '#a35f16',
+            items: [
+                { label: 'Python', value: 92 },
+                { label: 'JavaScript', value: 84 },
+                { label: 'C#', value: 82 },
+                { label: 'SQL', value: 76 },
+                { label: 'Node.js', value: 74 },
+                { label: 'Electron', value: 68 }
+            ]
+        },
         sections: [
             {
                 type: 'intro',
@@ -328,6 +428,27 @@ export const members = [
                 ]
             },
             {
+                type: 'projects',
+                title: 'Proyectos destacados',
+                items: [
+                    {
+                        name: 'Proyecto 1',
+                        description: 'Simulacion de un sitio de compras con cards de producto y filtros.',
+                        tech: 'React, CSS, Hooks'
+                    },
+                    {
+                        name: 'Proyecto 2',
+                        description: 'Panel de control de tareas con estado persistente en memoria.',
+                        tech: 'React, useState, localStorage'
+                    },
+                    {
+                        name: 'Proyecto 3',
+                        description: 'Pagina de equipo con navegacion y secciones de perfil.',
+                        tech: 'React Router, CSS'
+                    }
+                ]
+            },
+            {
                 type: 'extra',
                 text: 'Tambien disfruto colaborar, compartir lo que aprendo y seguir perfeccionando mis habilidades con proyectos propios. Hoy sigo profundizando en nuevas tecnologias, seguridad e integracion de agentes inteligentes dentro de flujos de trabajo reales.'
             }
@@ -342,6 +463,18 @@ export const members = [
         photoClass: 'profile-photo-custom',
         accent: '#7b4fa3',
         skills: ['Java', 'C#', 'Node.js','MySQL','Soporte IT'],
+        progress: {
+            type: 'progress',
+            title: 'Stack tecnico',
+            accent: '#7b4fa3',
+            items: [
+                { label: 'Java', value: 86 },
+                { label: 'C#', value: 80 },
+                { label: 'Node.js', value: 75 },
+                { label: 'MySQL', value: 70 },
+                { label: 'Soporte IT', value: 88 }
+            ]
+        },
         heroCopy: 'Enfocado en la resolucion tecnica y el desarrollo de software. Actualmente cursando la tecnicatura y trabajando en infraestructura de sistemas para brindar soluciones eficientes y escalables.',
         headline: 'DEV & SOPORTE IT',
         links: [
@@ -391,6 +524,27 @@ export const members = [
                     { front: 'Interestelar', back: 'Somos' },
                     { front: 'Hata el ultimo hombre', back: 'SED' },
                     { front: 'Saga Harry Potter', back: 'La Sintesis O´Konor' }
+                ]
+            },
+            {
+                type: 'projects',
+                title: 'Proyectos destacados',
+                items: [
+                    {
+                        name: 'MarBas - Plataforma de gestion Inmobiliaria',
+                        description: 'Plataforma web integral diseñada para modernizar la búsqueda de inmuebles. Ofrece a los clientes una experiencia inmersiva con galerías de fotos y recorridos 360°, y cuenta con un panel administrativo seguro para la gestión total del catálogo y contacto.',
+                        tech: 'HTML5, CSS, Javascript, Node.js, Express, MySQL'
+                    },
+                    {
+                        name: 'Gestor Club Deportivo',
+                        description: 'Sistema integral de gestión deportiva. Cuenta con módulos para el ABM (Alta, Baja y Modificación) de socios, inscripción a disciplinas y administración financiera (control de cuotas y liquidación de sueldos). Posteriormente, el sistema fue escalado a una versión móvil nativa utilizando Android Studio.',
+                        tech: 'C#, Kotlin, SQLite, Android Studio'
+                    },
+                    {
+                        name: 'Gestor de Vacunacion',
+                        description: 'Software integral para la administración de centros de inmunización, control de turnos, stock de dosis y geolocalización de sedes.',
+                        tech: 'JAVA, MySQL, Swing'
+                    }
                 ]
             },
             {

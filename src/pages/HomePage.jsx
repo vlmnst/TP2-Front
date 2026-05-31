@@ -11,8 +11,8 @@ function HomePage() {
             </section>
 
             <section className="member-grid">
-                {members.map((member) => (
-                    <MemberCard key={member.id} member={member} />
+                {members.map((member, index) => (
+                    <MemberCard key={member.id} member={member} order={index + 1} />
                 ))}
             </section>
 

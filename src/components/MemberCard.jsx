@@ -19,14 +19,17 @@ function avatarSource(member) {
     return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
-function MemberCard({ member }) {
+function MemberCard({ member, order }) {
     const meta = member.cardMeta || `${member.skills.length} habilidades`;
 
     return (
         <Link
             to={`/integrantes/${member.id}`}
             className="member-card"
-            style={{ '--member-accent': member.accent }}
+            style={{
+                '--member-accent': member.accent,
+                '--animation-delay': `${order * 40}ms`
+            }}
         >
             <img
                 className="member-card-photo"
