@@ -19,9 +19,9 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 
 ## Lógica de Datos e Integración
 
-- [ ] 10 - Crear `data/sample.json` con 20 objetos — Definir esquema (id, nombre, role, avatar, proyectos, tags, images).
-- [ ] 11 - Implementar componente `JsonExplorer` — Cargar y renderizar el JSON local dinámicamente en una vista paginada.
-- [ ] 12 - Añadir filtrado y buscador en tiempo real — Input debounced que filtra por nombre, stack o tags y actualiza la vista.
+- [X] 10 - Crear `data/sample.json` con 20 objetos — Definir esquema (id, nombre, role, avatar, proyectos, tags, images).
+- [X] 11 - Implementar componente `JsonExplorer` — Cargar y renderizar el JSON local dinámicamente en una vista paginada.
+- [X] 12 - Añadir filtrado y buscador en tiempo real — Input debounced que filtra por nombre, stack o tags y actualiza la vista.
 - [ ] 13 - Integrar API pública asíncrona — Elegir una API pública (ej. GitHub Users / JSONPlaceholder) y consumirla con fetch/axios.
 - [ ] 14 - Gestionar estados `loading` y `error` — Hook o patrón reutilizable para mostrar spinners y mensajes de error.
 - [ ] 15 - Implementar paginación (Anterior / Siguiente) — Componente que muestra la posición actual y permite navegar páginas.

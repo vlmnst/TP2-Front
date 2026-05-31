@@ -86,6 +86,12 @@ function Sidebar({ team, members, isOpen, onClose }) {
                     </div>
 
                     <div className="sidebar-group">
+                        <p className="sidebar-group-label">Exploracion</p>
+
+                        <NavLink className="sidebar-link" to="/jsonexplorer" onClick={onClose}>
+                            <span>Postulantes</span>
+                        </NavLink>
+
                         <NavLink className="sidebar-link" to="/galeria" onClick={onClose}>
                             <span>Galería de Imágenes</span>
                         </NavLink>
