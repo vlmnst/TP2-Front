@@ -1213,6 +1213,63 @@ img {
     justify-content: space-between;
 }
 
+/* TechStack*/
+
+.techstack {
+    padding: 1rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+/* lista */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* item (icono o texto) */
+.tech-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+
+    padding: 0.6rem 0.9rem;
+    border-radius: var(--radius);
+
+    font-size: 1rem;
+    color: var(--color-muted);
+
+    transition: all 180ms ease;
+}
+
+/* hover SOLO contenido, no tarjeta */
+.tech-item:hover {
+    transform: translateY(-3px);
+    color: var(--member-accent, var(--color-primary));
+}
+
+/* iconos */
+.tech-item svg {
+    font-size: 1.6rem;
+}
+
+.tech-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-muted);
+}
+
+.tech-item:hover .tech-label {
+    color: var(--member-accent, var(--color-primary));
+}
+
 /* ── Responsive ── */
 
 @media (min-width: 1200px) {
