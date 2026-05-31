@@ -12,6 +12,7 @@ const stats = [
 function Layout() {
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const isGallery = location.pathname === '/galeria';
 
     useEffect(() => {
         setIsSidebarOpen(false);
@@ -48,24 +49,26 @@ function Layout() {
                     </div>
                 </header>
 
-                <section className="content-hero-wrap">
-                    <div className="container hero-grid content-hero-grid">
-                        <div className="hero-content">
-                            <p className="eyebrow">Arquitectura y navegacion</p>
-                            <h2 className="hero-title content-hero-title">{team.name}</h2>
-                            <p className="hero-copy">{team.description}</p>
-                        </div>
+                {!isGallery && (
+                    <section className="content-hero-wrap">
+                        <div className="container hero-grid content-hero-grid">
+                            <div className="hero-content">
+                                <p className="eyebrow">Arquitectura y navegacion</p>
+                                <h2 className="hero-title content-hero-title">{team.name}</h2>
+                                <p className="hero-copy">{team.description}</p>
+                            </div>
 
-                        <dl className="hero-stats">
-                            {stats.map((stat) => (
-                                <div key={stat.label} className="stat-item">
-                                    <dt>{stat.label}</dt>
-                                    <dd>{stat.value}</dd>
-                                </div>
-                            ))}
-                        </dl>
-                    </div>
-                </section>
+                            <dl className="hero-stats">
+                                {stats.map((stat) => (
+                                    <div key={stat.label} className="stat-item">
+                                        <dt>{stat.label}</dt>
+                                        <dd>{stat.value}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        </div>
+                    </section>
+                )}
 
                 <main className="site-main">
                     <Outlet />
