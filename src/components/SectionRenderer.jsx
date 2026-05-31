@@ -4,6 +4,8 @@ import TechStack from './TechStack';
 import SectionFocus from './SectionFocus';
 import SectionFlip from './SectionFlip';
 import SectionFavorites from './SectionFavorites';
+import SectionProgress from './SectionProgress';
+import SectionProjects from './SectionProjects';
 import SectionExtra from './SectionExtra';
 
 const RENDERERS = {
@@ -13,6 +15,8 @@ const RENDERERS = {
     focus: SectionFocus,
     flip: SectionFlip,
     favorites: SectionFavorites,
+    progress: SectionProgress,
+    projects: SectionProjects,
     extra: SectionExtra
 };
 

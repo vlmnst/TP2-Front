@@ -456,6 +456,10 @@ img {
 
 .member-card {
     --member-accent: var(--color-primary);
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeInUp 520ms ease both;
+    animation-delay: var(--animation-delay, 0ms);
     display: grid;
     min-height: 13rem;
     align-content: space-between;
@@ -505,6 +509,9 @@ img {
 /* ── Message Panel ── */
 
 .message-panel {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeInUp 520ms ease both;
     display: flex;
     gap: 1.5rem;
     align-items: center;
@@ -572,6 +579,9 @@ img {
 .profile-aside,
 .profile-card,
 .timeline-entry {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeInUp 520ms ease both;
     border: 1px solid var(--color-line);
     border-radius: var(--radius);
     background: var(--color-surface);
@@ -620,10 +630,156 @@ img {
 /* ── Info Section ── */
 
 .info-section {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeInUp 520ms ease both;
     display: grid;
     gap: 0.8rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--color-line);
+}
+
+.section-projects .section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.carousel-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.carousel-button {
+    border: 1px solid var(--color-line);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    padding: 0.65rem 0.95rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+.carousel-position {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.project-card {
+    padding: 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-line);
+    background: var(--color-surface);
+    box-shadow: 0 14px 28px rgba(31, 37, 40, 0.08);
+    display: grid;
+    gap: 0;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translatex(-30px);
+    }
+    to {
+        opacity: 2;
+        transform: translatex(0); 
+    }
+}
+
+.project-card-media {
+    position: relative;
+    min-height: 14rem;
+    overflow: hidden;
+}
+
+.project-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 420ms ease;
+}
+
+.project-card:hover .project-card-media img,
+.project-card:focus-within .project-card-media img {
+    transform: scale(1.04);
+}
+
+.project-card-body {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.25rem;
+}
+
+.project-card-label {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    color: var(--color-muted);
+}
+
+.project-card-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.project-card-description {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.project-card-tech {
+    display: inline-flex;
+    align-self: start;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(47, 122, 95, 0.1);
+    color: var(--project-accent);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.project-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.project-dot {
+    width: 0.95rem;
+    height: 0.95rem;
+    border: 1px solid var(--color-line);
+    background: transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.project-dot:hover,
+.project-dot:focus-visible {
+    transform: scale(1.08);
+    border-color: var(--project-accent);
+}
+
+.project-dot.is-active {
+    background: var(--project-accent);
+    border-color: var(--project-accent);
 }
 
 .info-section h3,
@@ -681,6 +837,30 @@ img {
     outline-offset: 2px;
 }
 
+/* ── Animation helpers ── */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ── Extra Info ── */
 
 .extra-info {
@@ -697,6 +877,40 @@ img {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.progress-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.progress-item {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.progress-item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.95rem;
+    color: var(--color-ink);
+}
+
+.progress-track {
+    width: 100%;
+    height: 0.85rem;
+    border-radius: 999px;
+    background: var(--color-line);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    transition: width 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 10px 20px rgba(47, 122, 95, 0.12);
 }
 
 .stack-card,
