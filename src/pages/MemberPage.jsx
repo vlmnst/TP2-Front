@@ -1,11 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { members } from '../data/team';
+import membersData from '../data/techStack.json';
 import ProfileAside from '../components/ProfileAside';
 import SectionRenderer from '../components/SectionRenderer';
+import TechStack from '../components/TechStack';
 
 function MemberPage() {
     const { memberId } = useParams();
     const member = members.find((item) => item.id === memberId);
+    const memberData = membersData.find((m) => m.id === memberId);
 
     if (!member) {
         return (
@@ -21,14 +24,19 @@ function MemberPage() {
 
     return (
         <div className="container profile-layout" style={{ '--member-accent': member.accent }}>
-            <ProfileAside member={member} />
+        <ProfileAside member={member} />
 
-            <article className="profile-card profile-card-portfolio">
-                {member.progress && <SectionRenderer section={member.progress} />}
-                {member.sections.map((section, i) => (
+        <article className="profile-card profile-card-portfolio">
+            {member.progress && <SectionRenderer section={member.progress} />}
+            {member.sections.map((section, i) => (
+                <>
                     <SectionRenderer key={i} section={section} />
-                ))}
-            </article>
+                    {section.type === 'focus' && memberData?.techStack?.length > 0 && (
+                        <TechStack items={memberData.techStack} />
+                    )}
+                </>
+            ))}
+        </article>
         </div>
     );
 }

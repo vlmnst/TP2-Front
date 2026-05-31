@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "Nico",
+    "techStack": ["HTML", "CSS", "JavaScript", "React", "MySQL"]
+  },
+  {
+    "id": "2",
+    "name": "Valeria",
+    "techStack": ["JavaScript", "TypeScript", "Node.js", "AWS", "Lambda", "DynamoDB", "MySQL", "Snowflake", "Git"]
+  },
+  {
+    "id": "3",
+    "name": "Anto",
+    "techStack": ["HTML", "CSS", "React", "Android","Git"]
+  },
+  {
+    "id": "4",
+    "name": "Guille",
+    "techStack": ["Python", "JavaScript", "HTML", "CSS", "Django", "FastAPI", "React", "Node.js", "Electron", "PostgreSQL", "SQLite", "Git"]
+  },
+  {
+    "id": "5",
+    "name": "Facundo",
+    "techStack": ["Java", "JavaScript", "Python", "HTML", "CSS", "Node.js", "Express", "MySQL", "MariaDB", "SQLite", "Git"]
+  }
+]
