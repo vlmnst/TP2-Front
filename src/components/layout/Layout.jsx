@@ -12,7 +12,7 @@ const stats = [
 function Layout() {
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const isGallery = location.pathname === '/galeria';
+    const isImmersiveView = location.pathname === '/galeria' || location.pathname === '/met';
 
     useEffect(() => {
         setIsSidebarOpen(false);
@@ -49,7 +49,7 @@ function Layout() {
                     </div>
                 </header>
 
-                {!isGallery && (
+                {!isImmersiveView && (
                     <section className="content-hero-wrap">
                         <div className="container hero-grid content-hero-grid">
                             <div className="hero-content">

@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout';
 import BitacoraPage from '../pages/BitacoraPage';
 import HomePage from '../pages/HomePage';
 import MemberPage from '../pages/MemberPage';
+import MetPage from '../pages/MetPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import GalleryPage from '../pages/GalleryPage';
 
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: 'galeria',
         element: <GalleryPage />,
+      },
+      {
+        path: 'met',
+        element: <MetPage />,
       },
     ],
     errorElement: <NotFoundPage />,
