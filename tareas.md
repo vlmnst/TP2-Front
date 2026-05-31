@@ -25,8 +25,8 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 - [ ] 13 - Integrar API pública asíncrona — Elegir una API pública (ej. GitHub Users / JSONPlaceholder) y consumirla con fetch/axios.
 - [ ] 14 - Gestionar estados `loading` y `error` — Hook o patrón reutilizable para mostrar spinners y mensajes de error.
 - [ ] 15 - Implementar paginación (Anterior / Siguiente) — Componente que muestra la posición actual y permite navegar páginas.
-- [ ] 16 - Crear `GalleryGrid` visualizador de imágenes — Grid responsive que usa las imágenes de los objetos o de la API.
-- [ ] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
+- [X] 16 - Crear `GalleryGrid` visualizador de imágenes — Grid responsive que usa las imágenes de los objetos o de la API.
+- [X] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
 
 ---
 

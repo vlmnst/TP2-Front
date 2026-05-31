@@ -1749,6 +1749,10 @@ img {
     .favorites-stage-visual {
         min-height: 10rem;
     }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 640px) {
@@ -1763,6 +1767,10 @@ img {
 
     .stack-card .tag-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }
 
