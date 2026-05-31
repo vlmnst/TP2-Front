@@ -86,6 +86,7 @@ img {
     top: 0;
     height: 100vh;
     padding: 1rem;
+    overflow: hidden;
     border-right: 1px solid rgba(220, 226, 223, 0.7);
     background:
         radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 18rem),
@@ -95,10 +96,11 @@ img {
 
 .sidebar-inner {
     display: grid;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto minmax(0, 1fr);
     gap: 1.4rem;
     height: 100%;
     padding: 1.2rem;
+    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.04);
@@ -152,11 +154,28 @@ img {
     display: grid;
     align-content: start;
     gap: 1.25rem;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+    scrollbar-gutter: stable;
 }
 
 .sidebar-group {
     display: grid;
     gap: 0.65rem;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 0.45rem;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(244, 246, 245, 0.24);
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .sidebar-group-label {
@@ -1348,6 +1367,36 @@ img {
 
     .member-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-height: 760px) {
+    .sidebar {
+        padding: 0.7rem;
+    }
+
+    .sidebar-inner {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .sidebar-logo {
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    .sidebar-title {
+        font-size: 1.45rem;
+    }
+
+    .sidebar-copy {
+        font-size: 0.95rem;
+    }
+
+    .sidebar-link,
+    .sidebar-sublink {
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
     }
 }
 
