@@ -12,7 +12,7 @@ function MessagePanel() {
         <section className="message-panel">
             <div>
                 <p className="eyebrow">Interactividad</p>
-                <h2>Mensajes dinamicos</h2>
+                <h2>Mensajes dinámicos</h2>
                 <p className="message-output is-visible">{homeMessages[index]}</p>
             </div>
             <button className="button button-primary" type="button" onClick={nextMessage}>

@@ -47,7 +47,7 @@ function Sidebar({ team, members, isOpen, onClose }) {
                         </NavLink>
 
                         <NavLink className="sidebar-link" to="/bitacora" onClick={onClose}>
-                            <span>Bitacora</span>
+                            <span>Bitácora</span>
                             <small>Proceso y decisiones</small>
                         </NavLink>
                     </div>

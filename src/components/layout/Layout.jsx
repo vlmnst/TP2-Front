@@ -53,7 +53,7 @@ function Layout() {
                     <section className="content-hero-wrap">
                         <div className="container hero-grid content-hero-grid">
                             <div className="hero-content">
-                                <p className="eyebrow">Arquitectura y navegacion</p>
+                                <p className="eyebrow">Arquitectura y navegación</p>
                                 <h2 className="hero-title content-hero-title">{team.name}</h2>
                                 <p className="hero-copy">{team.description}</p>
                             </div>
