@@ -19,13 +19,14 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 
 ## Lógica de Datos e Integración
 
-- [ ] 10 - Crear `data/sample.json` con 20 objetos — Definir esquema (id, nombre, role, avatar, proyectos, tags, images).
-- [ ] 11 - Implementar componente `JsonExplorer` — Cargar y renderizar el JSON local dinámicamente en una vista paginada.
-- [x] 12 - Añadir filtrado y buscador en tiempo real — Input debounced que filtra por nombre, stack o tags y actualiza la vista.
-- [x] 13 - Integrar API pública asíncrona — Elegir una API pública (ej. GitHub Users / JSONPlaceholder) y consumirla con fetch/axios.
-- [x] 14 - Gestionar estados `loading` y `error` — Hook o patrón reutilizable para mostrar spinners y mensajes de error.
-- [x] 15 - Implementar paginación (Anterior / Siguiente) — Componente que muestra la posición actual y permite navegar páginas.
-- [x] 16 - Crear `GalleryGrid` visualizador de imágenes — Grid responsive que usa las imágenes de los objetos o de la API.
-- [x] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
+- [X] 10 - Crear `data/sample.json` con 20 objetos — Definir esquema (id, nombre, role, avatar, proyectos, tags, images).
+- [X] 11 - Implementar componente `JsonExplorer` — Cargar y renderizar el JSON local dinámicamente en una vista paginada.
+- [X] 12 - Añadir filtrado y buscador en tiempo real — Input debounced que filtra por nombre, stack o tags y actualiza la vista.
+- [X] 13 - Integrar API pública asíncrona — Elegir una API pública (ej. GitHub Users / JSONPlaceholder) y consumirla con fetch/axios.
+- [X] 14 - Gestionar estados `loading` y `error` — Hook o patrón reutilizable para mostrar spinners y mensajes de error.
+- [X] 15 - Implementar paginación (Anterior / Siguiente) — Componente que muestra la posición actual y permite navegar páginas.
+- [X] 16 - Crear `GalleryGrid` visualizador de imágenes — Grid responsive que usa las imágenes de los objetos o de la API.
+- [X] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
 
 ---
+- [x] 18 - Actualizar README.md
