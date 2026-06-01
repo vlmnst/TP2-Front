@@ -27,56 +27,85 @@ export const members = [
         accent: '#2f7a5f',
         heroCopy: 'Rio Hondo, Santiago del Estero | 31 anos',
         headline: 'Desarrollador en formacion con interes en interfaces claras y proyectos concretos.',
-        cardMeta: 'HTML + React | MySQL | Frontend',
+        skills: ["Soporte IT", "HTML", "Node.js", "Java","JavaScript"],
         quickFacts: [
             'Rio Hondo, Santiago del Estero',
             '31 anos',
             'HTML, CSS, JavaScript, React y MySQL'
         ],
-        skills: ['HTML semantico', 'CSS responsive', 'JavaScript basico', 'React', 'MySql', 'Trabajo en equipo'],
-        movies: ['El senor de los anillos', 'Rocky IV', 'En busca de la felicidad'],
-        albums: ['Green River', 'Californication', 'Magos, espadas y rosas'],
-        extra: 'Le interesa aprender dia a dia, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta informacion en la web.',
+
+        links: [
+            { label: 'GitHub', href: 'https://github.com/NicoCris' }
+        ],
+        progress: {
+            type: 'progress',
+            title: 'Stack tecnico',
+            accent: '#2f7a5f',
+            items: [
+                { label: 'Soporte IT', value: 90 },
+                { label: 'HTML', value: 80 },
+                { label: 'Node.js', value: 75 },
+                { label: 'Java', value: 75 },
+                { label: 'Testing', value: 82 }
+            ]
+        },
+        
         sections: [
             {
                 type: 'intro',
-                title: 'Sobre Nico',
-                text: 'Le interesa aprender dia a dia en distintos grupos de trabajo, construir proyectos utiles y mejorar constantemente la forma en que presenta informacion en la web.'
+                title: 'Sobre mi',
+                text: 'Soy desarrolador frontend, he incursionado en este mundo ya hace tres años. Me considero una persona activa y curiosa. En la actualidad estoy trabajando en distintos grupos de trabajo, construyendo proyectos utiles y eficaces, siempre impulsado por un constante sentimiento de aprender algo nuevo e incursionar en una nueva aventura.'
             },
             {
-                type: 'list',
-                title: 'Habilidades',
-                items: ['HTML semantico', 'CSS responsive', 'JavaScript basico', 'React', 'MySQL', 'Trabajo en equipo']
+                type: 'focus',
+                title: 'Habilidades Blandas',
+                items: [
+                    {
+                        name: 'Comunicacion Efectiva',
+                        text: 'La comunicación en sistemas no se trata de ser extrovertido, sino de tener la capacidad de transmitir información compleja de forma clara y precisa, adaptando el mensaje al equipo de trabajo o al cliente en un proyecto especifico.'
+                    },
+                    {
+                        name: 'Liderazgo',
+                        text: 'Dentro de un proyecto siempre me encuentro en estado activo, realizando prueba de código, verificando lo scasos límites y proponiendo posibles soluciones o herramientas para immplementar en el proyecto.'
+                    },
+                    {
+                        name: 'Trabajo en equipo',
+                        text: 'El software a escala rara vez lo hace una sola persona. Me gusta intercamb iar experiencias, aprender en conjunto con mi equipo, a fin que el producto final trabajado sea lo más eficiente posible.'
+                    }
+                ]
             },
             {
-                type: 'list',
-                title: 'Peliculas favoritas',
-                items: ['El senor de los anillos', 'Rocky IV', 'En busca de la felicidad']
-            },
-            {
-                type: 'list',
-                title: 'Discos favoritos',
-                items: ['Green River', 'Californication', 'Magos, espadas y rosas']
+                type: 'flip',
+                title: 'Peliculas y discos favoritos',
+                variant: 'slide-down',
+                accent: '#2f7a5f',
+                frontLabel: 'Pelicula',
+                backLabel: 'Disco',
+                pairs: [
+                    { front: 'El senor de los anillos', back: 'Green River' },
+                    { front: 'Rocky IV', back: 'Californication' },
+                    { front: 'En busca de la felicidad', back: 'Magos, espadas y rosas' }
+                ]
             },
             {
                 type: 'projects',
                 title: 'Proyectos destacados',
                 items: [
                     {
-                        name: 'Proyecto 1',
-                        description: 'Simulacion de una app de gestion con componentes modulares y navega- cion interna.',
-                        tech: 'React, CSS, Vite'
+                        name: 'Gestor Club Deportivo',
+                        description: 'Sistema integral de gestión deportiva para escritorio. Cuenta con módulos para el ABM (Alta, Baja y Modificación) de socios, inscripción a disciplinas y administración financiera (control de cuotas y liquidación de sueldos). Posteriormente, el sistema fue escalado a una versión móvil nativa utilizando Android Studio.',
+                        tech: 'C#, MySQL, Kotlin, SQLite, Android Studio'
                     },
                     {
-                        name: 'Proyecto 2',
-                        description: 'Landing page adaptativa con animaciones suaves y botones interactivos.',
-                        tech: 'HTML, CSS, JavaScript'
+                        name: 'Gestor de turnos spa',
+                        description: 'Aplicación web de venta de servicios de estetica que permite al usuario 24 hs de disponibilidad para solicitar un turno en tiempo real en cualquiera de las especialidades',
+                        tech: 'HTML, CSS, Node.js'
                     },
                     {
-                        name: 'Proyecto 3',
-                        description: 'Mini herramienta de seguimiento con estados y mock de datos locales.',
-                        tech: 'React, Hooks, Routing'
-                    }
+                        name: 'Gestión y control de produccion panificadora',
+                        description: 'Aplicacion web que permite llevar un correcto control y seguimiento de materia prima y produccion para una panificadora. El cliente requeria la automatizacion de la gestion entre la planta central y las sucursales, por lo que se le proveyó un sistema integral de control de materia prima y seguimiento de los distintos productos.',
+                        tech: 'Node.js, MongoDB'
+                    },
                 ]
             },
             {

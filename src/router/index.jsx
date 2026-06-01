@@ -6,6 +6,7 @@ import MemberPage from '../pages/MemberPage';
 import MetPage from '../pages/MetPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import GalleryPage from '../pages/GalleryPage';
+import JsonExplorer from '../pages/JsonExplorer';
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: 'bitacora',
         element: <BitacoraPage />,
+      },
+      {
+        path: 'jsonexplorer',
+        element: <JsonExplorer />,
       },
       {
         path: 'integrantes/:memberId',
