@@ -611,5 +611,54 @@ export const logEntries = [
         decisions: 'Se decidio eliminar el contenido hardcodeado de los archivos HTML y conectarlos al sistema de datos centralizado.',
         challenges: 'Los HTML tenian contenido estatico desincronizado con data.js, lo que obligaba a actualizar varios archivos ante cada cambio.',
         changes: 'Se anadieron los atributos data-page y data-member-id en cada <body>, el contenedor <div id="app"></div> y las etiquetas <script> que cargan data.js y app.js. Ahora todo el contenido lo genera app.js a partir de los datos.'
+    },
+    {
+        date: '15 de mayo de 2026',
+        title: 'Migracion inicial a React y Vite',
+        decisions: 'Se decidio migrar la base estatica del TP1 a React 19 y Vite para estructurar la aplicacion mediante componentes reutilizables y rutas dinamicas.',
+        challenges: 'Configurar el enrutador y adaptar la manipulacion directa del DOM hacia el flujo de datos declarativo de React.',
+        changes: 'Se configuro React Router DOM, se crearon los componentes estructurales (Layout, Sidebar) y se modularizaron las secciones de los perfiles individuales.'
+    },
+    {
+        date: '18 de mayo de 2026',
+        title: 'Estilos unificados y Sidebar responsiva',
+        decisions: 'Se decidio unificar el diseno general del dashboard mediante variables CSS globales y dar soporte responsive para moviles.',
+        challenges: 'Adaptar los estilos inconexos del TP1 y lograr que la barra lateral colapse de forma fluida en pantallas chicas.',
+        changes: 'Se reestructuro global.css centralizando la paleta de colores y se aplico media-queries para la Sidebar responsive.'
+    },
+    {
+        date: '20 de mayo de 2026',
+        title: 'Componentes dinamicos de perfil',
+        decisions: 'Se busco dotar de dinamismo y mejor visualizacion a los datos de cada integrante en su perfil individual.',
+        challenges: 'Gestionar estados independientes para multiples carruseles y animar las barras de progreso sin afectar la performance.',
+        changes: 'Se crearon los componentes ProgressBar (barras de skills animadas) y SectionProjects (carruseles de proyectos con control manual).'
+    },
+    {
+        date: '22 de mayo de 2026',
+        title: 'Explorador JSON y API del MET',
+        decisions: 'Se definio crear un explorador para buscar candidatos locales y un modulo de conexion con la API del Museo MET.',
+        challenges: 'Coordinar las peticiones asincronas, paginar los resultados externos y controlar los estados de carga y error.',
+        changes: 'Se desarrollaron las paginas JsonExplorer (con filtros locales) y MetPage (con paginacion, buscador y modal de detalles).'
+    },
+    {
+        date: '24 de mayo de 2026',
+        title: 'Optimizacion de busquedas (useDebounce)',
+        decisions: 'Se decidio optimizar las consultas en los inputs de busqueda para no saturar las llamadas al servidor o procesamientos locales.',
+        challenges: 'Implementar una funcion de retraso limpia que se reinicie ante cada pulsacion de tecla en React.',
+        changes: 'Se desarrollo el hook personalizado useDebounce y se integro tanto en el Explorador JSON como en la conexion con el MET.'
+    },
+    {
+        date: '28 de mayo de 2026',
+        title: 'Galeria interactiva con Lightbox',
+        decisions: 'Se busco una visualizacion interactiva y limpia para la seccion de galeria de imagenes del grupo.',
+        challenges: 'Gestionar de manera global eventos de teclado (Esc, flechas) y agregar funcionalidad de zoom fluido dentro del modal.',
+        changes: 'Se construyo el componente Lightbox con navegacion interna, zoom interactivo y control mediante teclado.'
+    },
+    {
+        date: '30 de mayo de 2026',
+        title: 'Deploy final en Vercel e Integracion',
+        decisions: 'Se decidio unificar todos los cambios en la rama desa y realizar la publicacion final del sitio en Vercel.',
+        challenges: 'Solucionar advertencias de imports sensibles a mayusculas/minusculas entre entornos Windows (local) y Linux (Vercel).',
+        changes: 'Se corrigieron los nombres de los archivos en imports y se realizo el deploy automatico conectado a la rama main.'
     }
 ];
