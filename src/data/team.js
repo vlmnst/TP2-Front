@@ -510,86 +510,87 @@ export const members = [
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/facundo-david-bascur-it-dev/' }
         ],
         sections: [
+    {
+        type: 'intro',
+        title: 'Desarrollador de Software | Especialista en Soporte IT e Infraestructura',
+        text: 'Soy un profesional con un perfil híbrido que combina el desarrollo de software con una sólida base en soporte técnico y resolución de incidencias. Mi experiencia en sectores de alta exigencia, como la construcción y la energía fotovoltaica, me permitió forjar una mentalidad practica y una gran capacidad de respuesta bajo presión. Actualmente, mi enfoque principal está en la transición hacia el desarrollo a tiempo completo, aplicando mi experiencia técnica para construir soluciones digitales eficientes y escalables.'
+    },
+    {
+        type: 'stack',
+        title: 'Tecnologías que uso',
+        groups: [
             {
-                type: 'intro',
-                title: 'Desarrollador de Software | Especialista en Soporte IT e Infraestructura',
-                text: 'Soy un profesional con un perfil híbrido que combina el desarrollo de software con una sólida base en soporte técnico y resolución de incidencias. Mi experiencia en sectores de alta exigencia, como la construcción y la energía fotovoltaica, me permitió forjar una mentalidad practica y una gran capacidad de respuesta bajo presión. Actualmente, mi enfoque principal está en la transición hacia el desarrollo a tiempo completo, aplicando mi experiencia técnica para construir soluciones digitales eficientes y escalables.'
+                name: 'Lenguajes',
+                featured: true,
+                description: 'Backend & Lógica',
+                items: ['Java', 'C#', 'JavaScript', 'Python', 'JSON']
             },
             {
-                type: 'stack',
-                title: 'Tecnologías que uso',
-                groups: [
-                    {
-                        name: 'Lenguajes',
-                        featured: true,
-                        description: 'Backend & Lógica',
-                        items: ['Java', 'C#', 'JavaScript', 'Python', 'JSON']
-                    },
-                    {
-                        name: 'Frontend',
-                        items: ['HTML5', 'CSS3 Avanzado', 'Responsive Design', 'Pannellum.js (Tours 360)']
-                    },
-                    {
-                        name: 'Backend & Comunicación',
-                        items: ['Node.js', 'Express', 'Nodemailer (SMTP)', 'Fetch API', 'REST API']
-              {
-                type: 'focus',
-                title: 'Habilidades y enfoques',
-                items: [
-                    {
-                        name: 'Soporte IT e infraestructura',
-                        text: 'Me enfoco en resolver problemas técnicos de raíz y asegurar que todo funcione sin interrupciones, dándole siempre una respuesta clara y efectiva al usuario.'
-                    },
-                    {
-                        name: 'Desarrollo Backend',
-                        text: 'Me apasiona construir el motor de las aplicaciones. Disfruto diseñando la lógica de negocio, armando y testeando rutas, y gestionando el flujo de datos para garantizar que el sistema detrás de escena sea robusto, escalable y seguro.'
-                    },
-                    {
-                        name: 'Versatilidad y resolución',
-                        text: 'Mi experiencia me dio una capacidad de adaptación única para resolver problemas complejos y crear soluciones digitales bajo cualquier nivel de presión.' 
-                    }
-                ]
+                name: 'Frontend',
+                items: ['HTML5', 'CSS3 Avanzado', 'Responsive Design', 'Pannellum.js (Tours 360)']
             },
             {
-                type: 'stack'
-            },
-            {
-                type: 'flip',
-                title: 'Películas y discos favoritos',
-                frontLabel: 'Película',
-                backLabel: 'Disco',
-                pairs: [
-                    { front: 'Interestelar', back: 'Somos' },
-                    { front: 'Hasta el último hombre', back: 'SED' },
-                    { front: 'Saga Harry Potter', back: 'La Sintesis O´Konor' }
-                ]
-            },
-            {
-                type: 'projects',
-                title: 'Proyectos destacados',
-                items: [
-                    {
-                        name: 'MarBas - Plataforma de gestión Inmobiliaria',
-                        description: 'Plataforma web integral diseñada para modernizar la búsqueda de inmuebles. Ofrece a los clientes una experiencia inmersiva con galerías de fotos y recorridos 360°, y cuenta con un panel administrativo seguro para la gestión total del catálogo y contacto.',
-                        tech: 'HTML5, CSS, Javascript, Node.js, Express, MySQL'
-                    },
-                    {
-                        name: 'Gestor Club Deportivo',
-                        description: 'Sistema integral de gestión deportiva. Cuenta con módulos para el ABM (Alta, Baja y Modificación) de socios, inscripción a disciplinas y administración financiera (control de cuotas y liquidación de sueldos). Posteriormente, el sistema fue escalado a una versión móvil nativa utilizando Android Studio.',
-                        tech: 'C#, Kotlin, SQLite, Android Studio'
-                    },
-                    {
-                        name: 'Gestor de Vacunación',
-                        description: 'Software integral para la administración de centros de inmunización, control de turnos, stock de dosis y geolocalización de sedes.',
-                        tech: 'JAVA, MySQL, Swing'
-                    }
-                ]
-            },
-            {
-                type: 'extra',
-                text: 'Enfocado en la resolución técnica y el desarrollo de software. Actualmente cursando la tecnicatura y trabajando en infraestructura de sistemas para brindar soluciones eficientes y escalables.'
+                name: 'Backend & Comunicación',
+                items: ['Node.js', 'Express', 'Nodemailer (SMTP)', 'Fetch API', 'REST API']
             }
         ]
+    },
+    {
+        type: 'focus',
+        title: 'Habilidades y enfoques',
+        items: [
+            {
+                name: 'Soporte IT e infraestructura',
+                text: 'Me enfoco en resolver problemas técnicos de raíz y asegurar que todo funcione sin interrupciones, dándole siempre una respuesta clara y efectiva al usuario.'
+            },
+            {
+                name: 'Desarrollo Backend',
+                text: 'Me apasiona construir el motor de las aplicaciones. Disfruto diseñando la lógica de negocio, armando y testeando rutas, y gestionando el flujo de datos para garantizar que el sistema detrás de escena sea robusto, escalable y seguro.'
+            },
+            {
+                name: 'Versatilidad y resolución',
+                text: 'Mi experiencia me dio una capacidad de adaptación única para resolver problemas complejos y crear soluciones digitales bajo cualquier nivel de presión.'
+            }
+        ]
+    },
+    {
+        type: 'flip',
+        title: 'Películas y discos favoritos',
+        frontLabel: 'Película',
+        backLabel: 'Disco',
+        pairs: [
+            { front: 'Interestelar', back: 'Somos' },
+            { front: 'Hasta el último hombre', back: 'SED' },
+            { front: 'Saga Harry Potter', back: 'La Sintesis O´Konor' }
+        ]
+    },
+    {
+        type: 'projects',
+        title: 'Proyectos destacados',
+        items: [
+            {
+                name: 'MarBas - Plataforma de gestión Inmobiliaria',
+                description: 'Plataforma web integral diseñada para modernizar la búsqueda de inmuebles. Ofrece a los clientes una experiencia inmersiva con galerías de fotos y recorridos 360°, y cuenta con un panel administrativo seguro para la gestión total del catálogo y contacto.',
+                tech: 'HTML5, CSS, Javascript, Node.js, Express, MySQL'
+            },
+            {
+                name: 'Gestor Club Deportivo',
+                description: 'Sistema integral de gestión deportiva. Cuenta con módulos para el ABM (Alta, Baja y Modificación) de socios, inscripción a disciplinas y administración financiera (control de cuotas y liquidación de sueldos). Posteriormente, el sistema fue escalado a una versión móvil nativa utilizando Android Studio.',
+                tech: 'C#, Kotlin, SQLite, Android Studio'
+            },
+            {
+                name: 'Gestor de Vacunación',
+                description: 'Software integral para la administración de centros de inmunización, control de turnos, stock de dosis y geolocalización de sedes.',
+                tech: 'JAVA, MySQL, Swing'
+            }
+        ]
+    },
+    {
+        type: 'extra',
+        text: 'Enfocado en la resolución técnica y el desarrollo de software. Actualmente cursando la tecnicatura y trabajando en infraestructura de sistemas para brindar soluciones eficientes y escalables.'
+    }
+        
+]
     }
 ];
 
