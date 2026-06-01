@@ -28,7 +28,7 @@ function MemberCard({ member, order }) {
             className="member-card"
             style={{
                 '--member-accent': member.accent,
-                '--animation-delay': `${order * 40}ms`
+                '--animation-delay': `${order * 120}ms`
             }}
         >
             <img

@@ -35,8 +35,6 @@ function Sidebar({ team, members, isOpen, onClose }) {
                     </button>
                 </div>
 
-                <p className="sidebar-copy">{team.description}</p>
-
                 <nav className="sidebar-nav" aria-label="Navegacion principal">
                     <div className="sidebar-group">
                         <p className="sidebar-group-label">General</p>
