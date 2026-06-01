@@ -27,7 +27,7 @@ export const members = [
         accent: '#2f7a5f',
         heroCopy: 'Rio Hondo, Santiago del Estero | 31 anos',
         headline: 'Desarrollador en formacion con interes en interfaces claras y proyectos concretos.',
-        cardMeta: 'HTML + React | MySQL | Frontend',
+        skills: ["Soporte IT", "HTML", "Node.js", "Java","JavaScript"],
         quickFacts: [
             'Rio Hondo, Santiago del Estero',
             '31 anos',
@@ -37,7 +37,6 @@ export const members = [
         links: [
             { label: 'GitHub', href: 'https://github.com/NicoCris' }
         ],
-        skills: ["Soporte IT", "HTML", "Node.js", "Java","JavaScript"],
         progress: {
             type: 'progress',
             title: 'Stack tecnico',
@@ -58,9 +57,22 @@ export const members = [
                 text: 'Soy desarrolador frontend, he incursionado en este mundo ya hace tres años. Me considero una persona activa y curiosa. En la actualidad estoy trabajando en distintos grupos de trabajo, construyendo proyectos utiles y eficaces, siempre impulsado por un constante sentimiento de aprender algo nuevo e incursionar en una nueva aventura.'
             },
             {
-                type: 'list',
-                title: 'Habilidades',
-                items: ['Comunicacion Efectiva', 'Liderazgo', 'Desarrollo Web' , 'Trabajo en equipo']
+                type: 'focus',
+                title: 'Habilidades Blandas',
+                items: [
+                    {
+                        name: 'Comunicacion Efectiva',
+                        text: 'La comunicación en sistemas no se trata de ser extrovertido, sino de tener la capacidad de transmitir información compleja de forma clara y precisa, adaptando el mensaje al equipo de trabajo o al cliente en un proyecto especifico.'
+                    },
+                    {
+                        name: 'Liderazgo',
+                        text: 'Dentro de un proyecto siempre me encuentro en estado activo, realizando prueba de código, verificando lo scasos límites y proponiendo posibles soluciones o herramientas para immplementar en el proyecto.'
+                    },
+                    {
+                        name: 'Trabajo en equipo',
+                        text: 'El software a escala rara vez lo hace una sola persona. Me gusta intercamb iar experiencias, aprender en conjunto con mi equipo, a fin que el producto final trabajado sea lo más eficiente posible.'
+                    }
+                ]
             },
             {
                 type: 'flip',
