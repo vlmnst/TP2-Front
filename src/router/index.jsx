@@ -7,6 +7,7 @@ import MetPage from '../pages/MetPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import GalleryPage from '../pages/GalleryPage';
 import JsonExplorer from '../pages/JsonExplorer';
+import ArchitecturePage from '../pages/ArchitecturePage';
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: 'bitacora',
         element: <BitacoraPage />,
+      },
+      {
+        path: 'arquitectura',
+        element: <ArchitecturePage />,
       },
       {
         path: 'jsonexplorer',

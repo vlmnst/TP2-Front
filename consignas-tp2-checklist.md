@@ -106,11 +106,11 @@ Documento creado a partir de `Consigna TP 02.pdf`.
 
 ## 8. Árbol de renderizado — Arquitectura de componentes
 
-- [ ] Incluir representación gráfica o esquemática del árbol de renderizado.
-- [ ] Identificar claramente el componente raíz `App`.
-- [ ] Identificar componentes superiores como `Layout` y `Sidebar`.
-- [ ] Detallar componentes hijos: cards, buttons, modals, páginas y secciones.
-- [ ] Mostrar jerarquía completa de la aplicación.
+- [x] Incluir representación gráfica o esquemática del árbol de renderizado.
+- [x] Identificar claramente el componente raíz `App`.
+- [x] Identificar componentes superiores como `Layout` y `Sidebar`.
+- [x] Detallar componentes hijos: cards, buttons, modals, páginas y secciones.
+- [x] Mostrar jerarquía completa de la aplicación.
 
 ## README.md obligatorio
 
@@ -148,6 +148,5 @@ Documento creado a partir de `Consigna TP 02.pdf`.
 - [ ] Pegar links de repo y deploy en la planilla de la comisión.
 - [ ] Agregar zoom real al Lightbox o ajustar la documentación si no lo van a implementar.
 - [ ] Documentar roles + GitFlow/Trello en Bitácora.
-- [ ] Agregar árbol de renderizado.
+- [x] Agregar árbol de renderizado.
 - [ ] Completar sección de Uso de IA con detalles concretos.
-

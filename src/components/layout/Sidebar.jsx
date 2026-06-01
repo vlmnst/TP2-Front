@@ -50,6 +50,11 @@ function Sidebar({ team, members, isOpen, onClose }) {
                             <span>Bitacora</span>
                             <small>Proceso y decisiones</small>
                         </NavLink>
+
+                        <NavLink className="sidebar-link" to="/arquitectura" onClick={onClose}>
+                            <span>Arquitectura</span>
+                            <small>Arbol de componentes</small>
+                        </NavLink>
                     </div>
 
                     <div className="sidebar-group">

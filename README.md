@@ -105,6 +105,7 @@ La app incluye:
     │   ├── techIcons.js
     │   └── techStack.json
     ├── pages/
+    │   ├── ArchitecturePage.jsx
     │   ├── BitacoraPage.jsx
     │   ├── GalleryPage.jsx
     │   ├── HomePage.jsx
@@ -126,7 +127,56 @@ La app incluye:
 - `src/pages/GalleryPage.jsx` - galería de imágenes con Lightbox.
 - `src/pages/MetPage.jsx` - explorador del MET con búsqueda, filtros y paginación.
 - `src/pages/BitacoraPage.jsx` - bitácora de desarrollo.
+- `src/pages/ArchitecturePage.jsx` - árbol de renderizado y jerarquía de componentes.
 - `src/data/team.js` - datos del equipo, secciones de perfil y configuración de navegación.
+
+---
+
+## Árbol de renderizado
+
+El árbol de renderizado muestra cómo se organiza la aplicación desde el punto de entrada hasta las páginas y componentes hijos. En este proyecto, `App` es la raíz, `RouterProvider` conecta React Router, `Layout` sostiene la estructura común, `Sidebar` organiza la navegación y `Outlet` renderiza la página activa según la URL.
+
+```txt
+main.jsx
+└── App
+    └── RouterProvider
+        └── Layout
+            ├── Sidebar
+            │   ├── Logo del grupo
+            │   ├── Navegación general
+            │   ├── Submenú de integrantes
+            │   └── Navegación de exploración
+            ├── Header / Topbar
+            ├── Outlet
+            │   ├── HomePage
+            │   │   ├── MemberCard
+            │   │   └── MessagePanel
+            │   ├── MemberPage
+            │   │   ├── ProfileAside
+            │   │   │   └── SocialButtons
+            │   │   ├── SectionRenderer
+            │   │   │   ├── SectionIntro
+            │   │   │   ├── SectionList
+            │   │   │   ├── SectionProgress
+            │   │   │   │   └── ProgressBar
+            │   │   │   ├── SectionProjects
+            │   │   │   ├── SectionFlip
+            │   │   │   ├── SectionFavorites
+            │   │   │   └── SectionExtra
+            │   │   └── TechStack
+            │   ├── JsonExplorer
+            │   │   └── JsonMemberCard
+            │   ├── GalleryPage
+            │   │   └── Lightbox
+            │   ├── MetPage
+            │   │   ├── Pagination
+            │   │   └── MetArtworkModal
+            │   ├── BitacoraPage
+            │   └── NotFoundPage
+            └── Footer
+```
+
+La misma información también está disponible dentro de la aplicación en la ruta `/arquitectura`.
 
 ---
 
