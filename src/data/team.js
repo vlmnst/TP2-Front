@@ -33,30 +33,59 @@ export const members = [
             '31 años',
             'HTML, CSS, JavaScript, React y MySQL'
         ],
-        skills: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'React', 'MySql', 'Trabajo en equipo'],
-        movies: ['El señor de los anillos', 'Rocky IV', 'En busca de la felicidad'],
-        albums: ['Green River', 'Californication', 'Magos, espadas y rosas'],
-        extra: 'Le interesa aprender día a día, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta información en la web.',
+
+        links: [
+            { label: 'GitHub', href: 'https://github.com/NicoCris' }
+        ],
+        progress: {
+            type: 'progress',
+            title: 'Stack técnico',
+            accent: '#2f7a5f',
+            items: [
+                { label: 'Soporte IT', value: 90 },
+                { label: 'HTML', value: 80 },
+                { label: 'Node.js', value: 75 },
+                { label: 'Java', value: 75 },
+                { label: 'Testing', value: 82 }
+            ]
+        },
+        
         sections: [
             {
                 type: 'intro',
-                title: 'Sobre Nico',
-                text: 'Le interesa aprender día a día en distintos grupos de trabajo, construir proyectos útiles y mejorar constantemente la forma en que presenta información en la web.'
+                title: 'Sobre mi',
+                text: 'Soy desarrolador frontend, he incursionado en este mundo ya hace tres años. Me considero una persona activa y curiosa. En la actualidad estoy trabajando en distintos grupos de trabajo, construyendo proyectos útiles y eficaces, siempre impulsado por un constante sentimiento de aprender algo nuevo e incursionar en una nueva aventura.'
             },
             {
-                type: 'list',
-                title: 'Habilidades',
-                items: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'React', 'MySQL', 'Trabajo en equipo']
+                type: 'focus',
+                title: 'Habilidades Blandas',
+                items: [
+                    {
+                        name: 'Comunicación Efectiva',
+                        text: 'La comunicación en sistemas no se trata de ser extrovertido, sino de tener la capacidad de transmitir información compleja de forma clara y precisa, adaptando el mensaje al equipo de trabajo o al cliente en un proyecto especifico.'
+                    },
+                    {
+                        name: 'Liderazgo',
+                        text: 'Dentro de un proyecto siempre me encuentro en estado activo, realizando prueba de código, verificando lo scasos límites y proponiendo posibles soluciones o herramientas para immplementar en el proyecto.'
+                    },
+                    {
+                        name: 'Trabajo en equipo',
+                        text: 'El software a escala rara vez lo hace una sola persona. Me gusta intercambiar experiencias, aprender en conjunto con mi equipo, a fin que el producto final trabajado sea lo más eficiente posible.'
+                    }
+                ]
             },
             {
-                type: 'list',
-                title: 'Peliculas favoritas',
-                items: ['El señor de los anillos', 'Rocky IV', 'En busca de la felicidad']
-            },
-            {
-                type: 'list',
-                title: 'Discos favoritos',
-                items: ['Green River', 'Californication', 'Magos, espadas y rosas']
+                type: 'flip',
+                title: 'Películas y discos favoritos',
+                variant: 'slide-down',
+                accent: '#2f7a5f',
+                frontLabel: 'Película',
+                backLabel: 'Disco',
+                pairs: [
+                    { front: 'El señor de los anillos', back: 'Green River' },
+                    { front: 'Rocky IV', back: 'Californication' },
+                    { front: 'En busca de la felicidad', back: 'Magos, espadas y rosas' }
+                ]
             },
             {
                 type: 'projects',
@@ -68,15 +97,15 @@ export const members = [
                         tech: 'React, CSS, Vite'
                     },
                     {
-                        name: 'Proyecto 2',
-                        description: 'Landing page adaptativa con animaciones suaves y botones interactivos.',
-                        tech: 'HTML, CSS, JavaScript'
+                        name: 'Gestor de turnos spa',
+                        description: 'Aplicación web de venta de servicios de estetica que permite al usuario 24 hs de disponibilidad para solicitar un turno en tiempo real en cualquiera de las especialidades',
+                        tech: 'HTML, CSS, Node.js'
                     },
                     {
-                        name: 'Proyecto 3',
-                        description: 'Mini herramienta de seguimiento con estados y mock de datos locales.',
-                        tech: 'React, Hooks, Routing'
-                    }
+                        name: 'Gestión y control de produccion panificadora',
+                        description: 'Aplicacion web que permite llevar un correcto control y seguimiento de materia prima y produccion para una panificadora. El cliente requeria la automatizacion de la gestion entre la planta central y las sucursales, por lo que se le proveyó un sistema integral de control de materia prima y seguimiento de los distintos productos.',
+                        tech: 'Node.js, MongoDB'
+                    },
                 ]
             },
             {
@@ -110,12 +139,11 @@ export const members = [
             title: 'Stack técnico',
             accent: '#c4513b',
             items: [
-                { label: 'JavaScript', value: 92 },
-                { label: 'TypeScript', value: 86 },
-                { label: 'Node.js', value: 82 },
-                { label: 'AWS', value: 78 },
+                { label: 'TypeScript', value: 80 },
+                { label: 'Node.js', value: 89 },
+                { label: 'AWS', value: 45 },
                 { label: 'MySQL', value: 72 },
-                { label: 'Snowflake', value: 68 }
+                { label: 'Snowflake', value: 56 }
             ]
         },
         sections: [
@@ -179,22 +207,22 @@ export const members = [
             },
             {
                 type: 'projects',
-                title: 'Proyectos destacados',
+                title: 'Nuevas features en plataforma de comercios',
                 items: [
                     {
-                        name: 'Proyecto 1',
-                        description: 'Simulación de un dashboard con componentes responsivos y cards.',
-                        tech: 'React, CSS, useState'
+                        name: 'Gestión de donaciones',
+                        description: 'El stakeholder necesitaba una forma de gestionar las donaciones recibidas por su ONG y la creación de nuevas campañas. Se construyó una aplicación web con un panel administrativo para registrar cada donación, visualizar el historial y generar reportes mensuales. ',
+                        tech: 'Node.js, AWS Lambda, API Gateway, DBeaver, MySQL'
                     },
                     {
-                        name: 'Proyecto 2',
-                        description: 'Formulario interactivo con validación y estado local.',
-                        tech: 'React, Formik, CSS'
+                        name: 'Módulo de legales',
+                        description: 'Cada comercio necesitaba una forma de aceptar los términos y condiciones de cada servicio, y el equipo quería una forma de centralizar la lógica de aceptación y versionado. Se construyo un módulo de legales con un panel para crear nuevos documentos, versionarlos y asignarlos a cada servicio. El módulo se integro con el sistema de autenticación para registrar la aceptación de cada usuario.',
+                        tech: 'Node.js, AWS Lambda, API Gateway, S3, OpenSearch'
                     },
                     {
-                        name: 'Proyecto 3',
-                        description: 'Página de perfil con secciones dinámicas y data mock.',
-                        tech: 'React, Router, JS'
+                        name: 'Envío de emails diarios por desconocimiento de compras.',
+                        description: 'Los comercios tenían que ser notificados diariamente de las compras desconocidas en su plataforma, lo que se hacía manualmente a través de un reporte generado por el equipo de soporte. Se automatizó el proceso construyendo una función serverless que se ejecuta diariamente, consulta las compras desconocidas y envía un email con el detalle a cada comercio.',
+                        tech: 'Node.js, AWS Lambda, API Gateway, SQS, Cron'
                     }
                 ]
             },
@@ -207,7 +235,7 @@ export const members = [
     {
         id: '3',
         name: 'Anto :)',
-        location: 'Cordobaaaaa capiiiiital',
+        location: 'Córdobaaaaa capiiiiital',
         age: 36,
         photo: '/img/anto_tortuga.png',
         accent: '#fb8f14',
@@ -217,7 +245,7 @@ export const members = [
             { label: 'GitHub', href: 'https://github.com/Antocba' },
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/antonellamasini' }
         ],
-        skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo movil'],
+        skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil'],
         progress: {
             type: 'progress',
             title: 'Stack técnico',
@@ -504,16 +532,26 @@ export const members = [
                     {
                         name: 'Backend & Comunicación',
                         items: ['Node.js', 'Express', 'Nodemailer (SMTP)', 'Fetch API', 'REST API']
+              {
+                type: 'focus',
+                title: 'Habilidades y enfoques',
+                items: [
+                    {
+                        name: 'Soporte IT e infraestructura',
+                        text: 'Me enfoco en resolver problemas técnicos de raíz y asegurar que todo funcione sin interrupciones, dándole siempre una respuesta clara y efectiva al usuario.'
                     },
                     {
-                        name: 'Bases de Datos',
-                        items: ['MySQL', 'MariaDB', 'SQLite']
+                        name: 'Desarrollo Backend',
+                        text: 'Me apasiona construir el motor de las aplicaciones. Disfruto diseñando la lógica de negocio, armando y testeando rutas, y gestionando el flujo de datos para garantizar que el sistema detrás de escena sea robusto, escalable y seguro.'
                     },
                     {
-                        name: 'Herramientas & Soporte IT',
-                        items: ['Git', 'InvGate', 'AnyDesk', 'Infraestructura de Redes']
+                        name: 'Versatilidad y resolución',
+                        text: 'Mi experiencia me dio una capacidad de adaptación única para resolver problemas complejos y crear soluciones digitales bajo cualquier nivel de presión.' 
                     }
                 ]
+            },
+            {
+                type: 'stack'
             },
             {
                 type: 'flip',
@@ -590,5 +628,54 @@ export const logEntries = [
         decisions: 'Se decidió eliminar el contenido hardcodeado de los archivos HTML y conectarlos al sistema de datos centralizado.',
         challenges: 'Los HTML tenían contenido estático desincronizado con data.js, lo que obligaba a actualizar varios archivos ante cada cambio.',
         changes: 'Se anadieron los atributos data-page y data-member-id en cada <body>, el contenedor <div id="app"></div> y las etiquetas <script> que cargan data.js y app.js. Ahora todo el contenido lo genera app.js a partir de los datos.'
+    },
+    {
+        date: '15 de mayo de 2026',
+        title: 'Migracion inicial a React y Vite',
+        decisions: 'Se decidio migrar la base estatica del TP1 a React 19 y Vite para estructurar la aplicacion mediante componentes reutilizables y rutas dinamicas.',
+        challenges: 'Configurar el enrutador y adaptar la manipulacion directa del DOM hacia el flujo de datos declarativo de React.',
+        changes: 'Se configuro React Router DOM, se crearon los componentes estructurales (Layout, Sidebar) y se modularizaron las secciones de los perfiles individuales.'
+    },
+    {
+        date: '18 de mayo de 2026',
+        title: 'Estilos unificados y Sidebar responsiva',
+        decisions: 'Se decidio unificar el diseno general del dashboard mediante variables CSS globales y dar soporte responsive para moviles.',
+        challenges: 'Adaptar los estilos inconexos del TP1 y lograr que la barra lateral colapse de forma fluida en pantallas chicas.',
+        changes: 'Se reestructuro global.css centralizando la paleta de colores y se aplico media-queries para la Sidebar responsive.'
+    },
+    {
+        date: '20 de mayo de 2026',
+        title: 'Componentes dinamicos de perfil',
+        decisions: 'Se busco dotar de dinamismo y mejor visualizacion a los datos de cada integrante en su perfil individual.',
+        challenges: 'Gestionar estados independientes para multiples carruseles y animar las barras de progreso sin afectar la performance.',
+        changes: 'Se crearon los componentes ProgressBar (barras de skills animadas) y SectionProjects (carruseles de proyectos con control manual).'
+    },
+    {
+        date: '22 de mayo de 2026',
+        title: 'Explorador JSON y API del MET',
+        decisions: 'Se definio crear un explorador para buscar candidatos locales y un modulo de conexion con la API del Museo MET.',
+        challenges: 'Coordinar las peticiones asincronas, paginar los resultados externos y controlar los estados de carga y error.',
+        changes: 'Se desarrollaron las paginas JsonExplorer (con filtros locales) y MetPage (con paginacion, buscador y modal de detalles).'
+    },
+    {
+        date: '24 de mayo de 2026',
+        title: 'Optimizacion de busquedas (useDebounce)',
+        decisions: 'Se decidio optimizar las consultas en los inputs de busqueda para no saturar las llamadas al servidor o procesamientos locales.',
+        challenges: 'Implementar una funcion de retraso limpia que se reinicie ante cada pulsacion de tecla en React.',
+        changes: 'Se desarrollo el hook personalizado useDebounce y se integro tanto en el Explorador JSON como en la conexion con el MET.'
+    },
+    {
+        date: '28 de mayo de 2026',
+        title: 'Galeria interactiva con Lightbox',
+        decisions: 'Se busco una visualizacion interactiva y limpia para la seccion de galeria de imagenes del grupo.',
+        challenges: 'Gestionar de manera global eventos de teclado (Esc, flechas) y agregar funcionalidad de zoom fluido dentro del modal.',
+        changes: 'Se construyo el componente Lightbox con navegacion interna, zoom interactivo y control mediante teclado.'
+    },
+    {
+        date: '30 de mayo de 2026',
+        title: 'Deploy final en Vercel e Integracion',
+        decisions: 'Se decidio unificar todos los cambios en la rama desa y realizar la publicacion final del sitio en Vercel.',
+        challenges: 'Solucionar advertencias de imports sensibles a mayusculas/minusculas entre entornos Windows (local) y Linux (Vercel).',
+        changes: 'Se corrigieron los nombres de los archivos en imports y se realizo el deploy automatico conectado a la rama main.'
     }
 ];
