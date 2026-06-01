@@ -29,3 +29,4 @@ A continuación se listan las tareas claras y accionables correspondientes a los
 - [X] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
 
 ---
+- [x] 18 - Actualizar README.md
