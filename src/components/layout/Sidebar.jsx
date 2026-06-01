@@ -53,7 +53,7 @@ function Sidebar({ team, members, isOpen, onClose }) {
 
                         <NavLink className="sidebar-link" to="/arquitectura" onClick={onClose}>
                             <span>Arquitectura</span>
-                            <small>Arbol de componentes</small>
+                            <small>Árbol de componentes</small>
                         </NavLink>
                     </div>
 
