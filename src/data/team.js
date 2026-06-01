@@ -1,5 +1,5 @@
 export const team = {
-    name: 'Grupo 2D',
+    name: 'Grupo 6 - 2D',
     tagline: 'Migración del TP1 hacia React con una arquitectura de componentes.',
     description: 'Presentamos al equipo, sus perfiles individuales y la evolución del proyecto en una versión construida con React.'
 };
