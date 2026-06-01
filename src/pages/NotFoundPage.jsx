@@ -5,7 +5,7 @@ function NotFoundPage() {
     <section className="page-section">
       <p className="section-kicker">404</p>
       <h2>Ruta no encontrada</h2>
-      <p>La ruta que intentaste abrir no existe en esta etapa de la migracion.</p>
+      <p>La ruta que intentaste abrir no existe en esta etapa de la migración.</p>
       <Link className="inline-link" to="/">
         Volver al inicio
       </Link>

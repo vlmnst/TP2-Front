@@ -45,13 +45,13 @@ function Sidebar({ team, members, isOpen, onClose }) {
                         </NavLink>
 
                         <NavLink className="sidebar-link" to="/bitacora" onClick={onClose}>
-                            <span>Bitacora</span>
+                            <span>Bitácora</span>
                             <small>Proceso y decisiones</small>
                         </NavLink>
 
                         <NavLink className="sidebar-link" to="/arquitectura" onClick={onClose}>
                             <span>Arquitectura</span>
-                            <small>Arbol de componentes</small>
+                            <small>Árbol de componentes</small>
                         </NavLink>
                     </div>
 
@@ -88,7 +88,7 @@ function Sidebar({ team, members, isOpen, onClose }) {
                     </div>
 
                     <div className="sidebar-group">
-                        <p className="sidebar-group-label">Exploracion</p>
+                        <p className="sidebar-group-label">Exploración</p>
 
                         <NavLink className="sidebar-link" to="/jsonexplorer" onClick={onClose}>
                             <span>Postulantes</span>
@@ -100,7 +100,7 @@ function Sidebar({ team, members, isOpen, onClose }) {
 
                         <NavLink className="sidebar-link" to="/met" onClick={onClose}>
                             <span>Museo MET</span>
-                            <small>Busqueda viva y archivo visual</small>
+                            <small>Búsqueda viva y archivo visual</small>
                         </NavLink>
                     </div>
                 </nav>
