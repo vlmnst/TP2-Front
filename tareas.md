@@ -7,8 +7,8 @@ Las tareas ya implementadas fueron eliminadas para que esto funcione como tabler
 
 19. [ ] Publicar en la pestaña **Entrega TP2** el link al repositorio.
 20. [ ] Publicar en la pestaña **Entrega TP2** el link a la web desplegada en Vercel.
-21. [ ] Confirmar deploy final en Vercel.
-22. [ ] Actualizar en el README el enlace final al proyecto desplegado.
+21. [x] Confirmar deploy final en Vercel.
+22. [x] Actualizar en el README el enlace final al proyecto desplegado.
 
 ## Galería y Lightbox
 
@@ -24,27 +24,27 @@ Las tareas ya implementadas fueron eliminadas para que esto funcione como tabler
 
 27. [x] Incluir representación gráfica o esquemática del árbol de renderizado.
 [x] Identificar claramente el componente raíz `App`.
-[x] Identificar componentes superiores como `Layout` y `Sidebar`.
+29. 29. [x] Identificar componentes superiores como `Layout` y `Sidebar`.
 [x] Detallar componentes hijos: cards, buttons, modals, páginas y secciones.
 [x] Mostrar la jerarquía completa de la aplicación.
 
 ## README.md crítico
 
-32. [ ] Completar título del proyecto con link al deploy de Vercel.
-33. [ ] Actualizar la estructura de archivos para que coincida con el proyecto real.
-34. [ ] Agregar guía de estilos.
-35. [ ] Documentar paleta de colores con valores hexadecimales.
-36. [ ] Documentar tipografías utilizadas con enlaces.
-37. [ ] Explicar funciones dinámicas implementadas con capturas.
-38. [ ] Explicar componentes clave con capturas.
-39. [ ] Documentar la evolución del proyecto con mejoras y cambios realizados.
+32. [x] Completar título del proyecto con link al deploy de Vercel.
+33. [x] Actualizar la estructura de archivos para que coincida con el proyecto real.
+34. [x] Agregar guía de estilos.
+35. [x] Documentar paleta de colores con valores hexadecimales.
+36. [x] Documentar tipografías utilizadas con enlaces.
+37. [x] Explicar funciones dinámicas implementadas con capturas.
+38. [x] Explicar componentes clave con capturas.
+39. [x] Documentar la evolución del proyecto con mejoras y cambios realizados.
 40. [ ] Agregar capturas que muestren el progreso del proyecto.
 
-## Uso de IA
+## Uso de IA ( README.md)
 
-41. [ ] Explicar qué textos fueron generados o asistidos con IA.
-42. [ ] Explicar en qué problemas de lógica ayudó la IA.
-43. [ ] Explicar en qué problemas de debugging ayudó la IA.
-44. [ ] Especificar modelo usado para avatares o logos.
-45. [ ] Especificar criterio de prompt usado para recursos gráficos.
-46. [ ] Dejar claro que la IA fue asistente y que la autoría del proyecto se mantiene en el equipo.
+41. [x] Explicar qué textos fueron generados o asistidos con IA.
+42. [x] Explicar en qué problemas de lógica ayudó la IA.
+43. [x] Explicar en qué problemas de debugging ayudó la IA.
+44. [x] Especificar modelo usado para avatares o logos.
+45. [x] Especificar criterio de prompt usado para recursos gráficos.
+46. [x] Dejar claro que la IA fue asistente y que la autoría del proyecto se mantiene en el equipo.

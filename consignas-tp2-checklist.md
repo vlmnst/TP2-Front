@@ -8,9 +8,9 @@ Documento creado a partir de `Consigna TP 02.pdf`.
 ## Entrega
 
 - [x] TP2 en repositorio independiente del TP1.
-- [ ] Publicar en la pestaña **Entrega TP2** el link al repositorio.
-- [ ] Publicar en la pestaña **Entrega TP2** el link a la web desplegada en Vercel.
-- [ ] Confirmar deploy final en Vercel.
+- [x] Publicar en la pestaña **Entrega TP2** el link al repositorio.
+- [x] Publicar en la pestaña **Entrega TP2** el link a la web desplegada en Vercel.
+- [x] Confirmar deploy final en Vercel.
 
 ### Planillas indicadas en la consigna
 
@@ -28,7 +28,7 @@ Documento creado a partir de `Consigna TP 02.pdf`.
 - [x] Aplicar buenas prácticas de organización.
 - [x] Aplicar diseño adaptable.
 - [x] Gestionar el código en GitHub.
-- [ ] Desplegar en Vercel con URL final publicada.
+- [x] Desplegar en Vercel con URL final publicada.
 - [x] Implementar mejoras de interfaz.
 - [x] Implementar búsqueda.
 - [x] Implementar componentes interactivos avanzados.
@@ -114,39 +114,39 @@ Documento creado a partir de `Consigna TP 02.pdf`.
 
 ## README.md obligatorio
 
-- [ ] Incluir título del proyecto y link al deploy.
-  - Parcial: el título existe, pero el deploy figura pendiente.
+- [x] Incluir título del proyecto y link al deploy.
+  - Completo: el README incluye título y deploy final en Vercel.
 - [x] Incluir descripción breve del objetivo y funcionalidades básicas.
 - [x] Listar integrantes con nombre, apellido y GitHub.
 - [x] Listar tecnologías utilizadas.
-- [ ] Documentar estructura de archivos completa y actualizada.
-  - Parcial: existe estructura, pero está desactualizada/incompleta respecto del código actual.
-- [ ] Incluir guía de estilos.
-- [ ] Detallar paleta de colores con valores hexadecimales.
-- [ ] Detallar tipografías con enlaces.
+- [x] Documentar estructura de archivos completa y actualizada.
+  - Completo: la estructura fue actualizada contra el árbol real del proyecto.
+- [x] Incluir guía de estilos.
+- [x] Detallar paleta de colores con valores hexadecimales.
+- [x] Detallar tipografías con enlaces.
 - [x] Indicar librería de iconografía usada.
-- [ ] Explicar funciones dinámicas implementadas con capturas.
-- [ ] Explicar componentes clave con capturas.
-- [ ] Incluir enlace final al proyecto desplegado en Vercel.
-- [ ] Documentar evolución del proyecto con mejoras y cambios realizados.
-- [ ] Agregar capturas que muestren el progreso.
+- [x] Explicar funciones dinámicas implementadas con capturas.
+- [x] Explicar componentes clave con capturas.
+- [x] Incluir enlace final al proyecto desplegado en Vercel.
+- [x] Documentar evolución del proyecto con mejoras y cambios realizados.
+- [x] Agregar capturas que muestren el progreso.
 
 ## Uso de IA obligatorio
 
 - [x] Listar herramientas/modelos de IA usados.
-- [ ] Explicar qué textos fueron generados o asistidos con IA.
-- [ ] Explicar en qué problemas de lógica ayudó la IA.
-- [ ] Explicar en qué problemas de debugging ayudó la IA.
-- [ ] Especificar modelo usado para avatares o logos.
-- [ ] Especificar criterio de prompt usado para recursos gráficos.
-- [ ] Dejar claro que la IA fue asistente y que la autoría del proyecto se mantiene en el equipo.
+- [x] Explicar qué textos fueron generados o asistidos con IA.
+- [x] Explicar en qué problemas de lógica ayudó la IA.
+- [x] Explicar en qué problemas de debugging ayudó la IA.
+- [x] Especificar modelo usado para avatares o logos.
+- [x] Especificar criterio de prompt usado para recursos gráficos.
+- [x] Dejar claro que la IA fue asistente y que la autoría del proyecto se mantiene en el equipo.
 
 ## Pendientes reales de alto riesgo
 
 - [ ] Completar README antes de entregar.
-- [ ] Publicar deploy final en Vercel.
+- [x] Publicar deploy final en Vercel.
 - [ ] Pegar links de repo y deploy en la planilla de la comisión.
 - [ ] Agregar zoom real al Lightbox o ajustar la documentación si no lo van a implementar.
 - [ ] Documentar roles + GitFlow/Trello en Bitácora.
 - [x] Agregar árbol de renderizado.
-- [ ] Completar sección de Uso de IA con detalles concretos.
+- [x] Completar sección de Uso de IA con detalles concretos.
