@@ -13,7 +13,7 @@ Las tareas ya implementadas fueron eliminadas para que esto funcione como tabler
 ## Galería y Lightbox
 
 23. [x] Implementar zoom funcional dentro del Lightbox.
-24. [ ] Verificar manualmente que el Lightbox soporte zoom, navegación interna y cierre con `ESC`.
+24. [x] Verificar manualmente que el Lightbox soporte zoom, navegación interna y cierre con `ESC`.
 
 ## Bitácora de proyecto
 
@@ -22,11 +22,11 @@ Las tareas ya implementadas fueron eliminadas para que esto funcione como tabler
 
 ## Árbol de renderizado
 
-27. [ ] Incluir representación gráfica o esquemática del árbol de renderizado.
-28. [ ] Identificar claramente el componente raíz `App`.
-29. [ ] Identificar componentes superiores como `Layout` y `Sidebar`.
-30. [ ] Detallar componentes hijos: cards, buttons, modals, páginas y secciones.
-31. [ ] Mostrar la jerarquía completa de la aplicación.
+27. [x] Incluir representación gráfica o esquemática del árbol de renderizado.
+[x] Identificar claramente el componente raíz `App`.
+[x] Identificar componentes superiores como `Layout` y `Sidebar`.
+[x] Detallar componentes hijos: cards, buttons, modals, páginas y secciones.
+[x] Mostrar la jerarquía completa de la aplicación.
 
 ## README.md crítico
 
@@ -48,4 +48,3 @@ Las tareas ya implementadas fueron eliminadas para que esto funcione como tabler
 44. [ ] Especificar modelo usado para avatares o logos.
 45. [ ] Especificar criterio de prompt usado para recursos gráficos.
 46. [ ] Dejar claro que la IA fue asistente y que la autoría del proyecto se mantiene en el equipo.
-
