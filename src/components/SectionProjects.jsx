@@ -47,7 +47,7 @@ function SectionProjects({ section }) {
 
             <article key={activeIndex} className="project-card">
                 
-                {/* solo si existe existe imagen, muestra este div */}
+                {/* solo si existe imagen, muestra este div */}
                 {project.image && (
                     <div className="project-card-media">
                         <img src={project.image} alt={`Mockup de ${project.name}`} />

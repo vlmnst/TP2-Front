@@ -35,8 +35,6 @@ function Sidebar({ team, members, isOpen, onClose }) {
                     </button>
                 </div>
 
-                <p className="sidebar-copy">{team.description}</p>
-
                 <nav className="sidebar-nav" aria-label="Navegacion principal">
                     <div className="sidebar-group">
                         <p className="sidebar-group-label">General</p>
@@ -47,8 +45,13 @@ function Sidebar({ team, members, isOpen, onClose }) {
                         </NavLink>
 
                         <NavLink className="sidebar-link" to="/bitacora" onClick={onClose}>
-                            <span>Bitacora</span>
+                            <span>Bitácora</span>
                             <small>Proceso y decisiones</small>
+                        </NavLink>
+
+                        <NavLink className="sidebar-link" to="/arquitectura" onClick={onClose}>
+                            <span>Arquitectura</span>
+                            <small>Árbol de componentes</small>
                         </NavLink>
                     </div>
 
@@ -61,7 +64,6 @@ function Sidebar({ team, members, isOpen, onClose }) {
                             aria-controls="sidebar-members-list"
                         >
                             <span>Integrantes</span>
-                            <small>{members.length} perfiles individuales</small>
                         </button>
 
                         {isMembersExpanded ? (
@@ -83,6 +85,23 @@ function Sidebar({ team, members, isOpen, onClose }) {
                                 ))}
                             </div>
                         ) : null}
+                    </div>
+
+                    <div className="sidebar-group">
+                        <p className="sidebar-group-label">Exploración</p>
+
+                        <NavLink className="sidebar-link" to="/jsonexplorer" onClick={onClose}>
+                            <span>Postulantes</span>
+                        </NavLink>
+
+                        <NavLink className="sidebar-link" to="/galeria" onClick={onClose}>
+                            <span>Galería de Imágenes</span>
+                        </NavLink>
+
+                        <NavLink className="sidebar-link" to="/met" onClick={onClose}>
+                            <span>Museo MET</span>
+                            <small>Búsqueda viva y archivo visual</small>
+                        </NavLink>
                     </div>
                 </nav>
             </div>

@@ -1,6 +1,6 @@
 import SectionIntro from './SectionIntro';
 import SectionList from './SectionList';
-import SectionStack from './SectionStack';
+import TechStack from './TechStack';
 import SectionFocus from './SectionFocus';
 import SectionFlip from './SectionFlip';
 import SectionFavorites from './SectionFavorites';
@@ -11,7 +11,7 @@ import SectionExtra from './SectionExtra';
 const RENDERERS = {
     intro: SectionIntro,
     list: SectionList,
-    stack: SectionStack,
+    techstack: TechStack,
     focus: SectionFocus,
     flip: SectionFlip,
     favorites: SectionFavorites,
