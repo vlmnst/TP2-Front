@@ -64,7 +64,6 @@ function Sidebar({ team, members, isOpen, onClose }) {
                             aria-controls="sidebar-members-list"
                         >
                             <span>Integrantes</span>
-                            <small>{members.length} perfiles individuales</small>
                         </button>
 
                         {isMembersExpanded ? (
