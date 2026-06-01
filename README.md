@@ -21,13 +21,13 @@ La app incluye:
 
 ## Integrantes
 
-| Nombre | GitHub |
-| ------ | ------ |
-| Nico | [@NicoCris](https://github.com/NicoCris) |
-| Valeria Mansueto | [@vlmnst](https://github.com/vlmnst) |
-| Antonella Masini | [@Antocba](https://github.com/Antocba) |
-| Guillermo Novillo | [@guinovi](https://github.com/guinovi) |
-| Facundo Bascur | [@FacundoBascur](https://github.com/FacundoBascur) |
+| Nombre completo   | GitHub                                             |
+| ----------------- | -------------------------------------------------- |
+| Cristian Nicoletti| [@NicoCris](https://github.com/NicoCris)           |
+| Valeria Mansueto  | [@vlmnst](https://github.com/vlmnst)               |
+| Antonella Masini  | [@Antocba](https://github.com/Antocba)             |
+| Guillermo Novillo | [@guinovi](https://github.com/guinovi)             |
+| Facundo Bascur    | [@FacundoBascur](https://github.com/FacundoBascur) |
 
 ---
 

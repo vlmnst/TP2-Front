@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Nico",
-    "techStack": ["HTML", "CSS", "JavaScript", "React", "MySQL"]
+    "techStack": ["html", "css", "JavaScript", "React", "MySQL", "Git", "Node.js", "Java", "MongoDB", "JavaScript"]
   },
   {
     "id": "2",
