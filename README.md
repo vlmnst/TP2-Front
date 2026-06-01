@@ -20,15 +20,24 @@ La app incluye:
 
 ---
 
-## Integrantes
+## Integrantes y Roles
 
-| Nombre completo   | GitHub                                             |
-| ----------------- | -------------------------------------------------- |
-| Cristian Nicoletti| [@NicoCris](https://github.com/NicoCris)           |
-| Valeria Mansueto  | [@vlmnst](https://github.com/vlmnst)               |
-| Antonella Masini  | [@Antocba](https://github.com/Antocba)             |
-| Guillermo Novillo | [@guinovi](https://github.com/guinovi)             |
-| Facundo Bascur    | [@FacundoBascur](https://github.com/FacundoBascur) |
+| Nombre completo   | Rol Principal                    | GitHub                                             |
+| ----------------- | -------------------------------- | -------------------------------------------------- |
+| Cristian Nicoletti| Desarrollo & Documentación       | [@NicoCris](https://github.com/NicoCris)           |
+| Valeria Mansueto  | Scrum Master / Integración       | [@vlmnst](https://github.com/vlmnst)               |
+| Antonella Masini  | UI/UX & Desarrollo Frontend      | [@Antocba](https://github.com/Antocba)             |
+| Guillermo Novillo | Desarrollo                       | [@guinovi](https://github.com/guinovi)             |
+| Facundo Bascur    | Desarrollo                       | [@FacundoBascur](https://github.com/FacundoBascur) |
+
+---
+
+## Flujo de Trabajo
+
+Durante el desarrollo de este proyecto, utilizamos **GitFlow** como estrategia principal y única de control de versiones. 
+- **`main`**: Contiene el código estable de producción y es la rama que se despliega en Vercel.
+- **`desa` / `develop`**: Rama de integración donde se unen todas las características antes de pasar a producción.
+- **Ramas por número de tarea (`feature/*`)**: Utilizadas por cada integrante para desarrollar funcionalidades. Estas ramas se crearon siempre partiendo del **número de tarea o issue** estipulado en `tareas.md` (como por ejemplo las ramas `18-readme`, `23-zoom` o `27-arbol`) para mantener la trazabilidad de cada cambio antes de su Pull Request hacia `desa`.
 
 ---
 
