@@ -515,33 +515,26 @@ export const members = [
                 title: 'Desarrollador de Software | Especialista en Soporte IT e Infraestructura',
                 text: 'Soy un profesional con un perfil hibrido que combina el desarrollo de software con una solida base en soporte tecnico y resolucion de incidencias. Mi experiencia en sectores de alta exigencia, como la construccion y la energia fotovoltaica, me permitio forjar una mentalidad practica y una gran capacidad de respuesta bajo presion. Actualmente, mi enfoque principal esta en la transicion hacia el desarrollo a tiempo completo, aplicando mi experiencia tecnica para construir soluciones digitales eficientes y escalables.'
             },
-            {
-                type: 'stack',
-                title: 'Tecnologias que uso',
-                groups: [
+              {
+                type: 'focus',
+                title: 'Habilidades y enfoques',
+                items: [
                     {
-                        name: 'Lenguajes',
-                        featured: true,
-                        description: 'Backend & Logica',
-                        items: ['Java', 'C#', 'JavaScript', 'Python', 'JSON']
+                        name: 'Soporte IT e infraestructura',
+                        text: 'Me enfoco en resolver problemas técnicos de raíz y asegurar que todo funcione sin interrupciones, dándole siempre una respuesta clara y efectiva al usuario.'
                     },
                     {
-                        name: 'Frontend',
-                        items: ['HTML5', 'CSS3 Avanzado', 'Responsive Design', 'Pannellum.js (Tours 360)']
+                        name: 'Desarrollo Backend',
+                        text: 'Me apasiona construir el motor de las aplicaciones. Disfruto diseñando la lógica de negocio, armando y testeando rutas, y gestionando el flujo de datos para garantizar que el sistema detrás de escena sea robusto, escalable y seguro.'
                     },
                     {
-                        name: 'Backend & Comunicacion',
-                        items: ['Node.js', 'Express', 'Nodemailer (SMTP)', 'Fetch API', 'REST API']
-                    },
-                    {
-                        name: 'Bases de Datos',
-                        items: ['MySQL', 'MariaDB', 'SQLite']
-                    },
-                    {
-                        name: 'Herramientas & Soporte IT',
-                        items: ['Git', 'InvGate', 'AnyDesk', 'Infraestructura de Redes']
+                        name: 'Versatilidad y resolución',
+                        text: 'Mi experiencia me dio una capacidad de adaptación única para resolver problemas complejos y crear soluciones digitales bajo cualquier nivel de presión.' 
                     }
                 ]
+            },
+            {
+                type: 'stack'
             },
             {
                 type: 'flip',
