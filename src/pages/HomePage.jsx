@@ -6,7 +6,6 @@ function HomePage() {
     return (
         <div className="container page-stack">
             <section className="section-heading">
-                <p className="eyebrow">Equipo</p>
                 <h2>Integrantes del proyecto</h2>
             </section>
 
