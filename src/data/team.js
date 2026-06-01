@@ -119,6 +119,7 @@ export const members = [
         name: 'Valeria',
         location: 'Córdoba, Provincia de Córdoba',
         age: 30,
+        cardMeta: 'AWS | Backend',
         photo: '/img/perfil_vale.png',
         photoClass: 'profile-photo-custom',
         accent: '#c4513b',
