@@ -161,10 +161,3 @@ Este TP2 es la migración del TP1 hacia una estructura más modular y mantenible
 
 - `GitHub Copilot` / `Claude Sonnet` se usó para acelerar refactorizaciones de componentes, revisar código y mejorar redacción en la documentación.
 - `ChatGPT` se consultó para entender detalles de CSS 3D, animaciones y patrones de componentes accesibles.
-
----
-
-## Notas
-
-- El deploy en Vercel está pendiente de actualizar con la URL final.
-- Si quieres mejorar este README, agrega capturas actuales del dashboard React y el enlace de despliegue en la sección de `Deploy`.
