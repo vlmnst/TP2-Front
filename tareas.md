@@ -1,32 +1,51 @@
 # Tareas pendientes — TP2
 
-A continuación se listan las tareas claras y accionables correspondientes a los ítems todavía sin completar en `reqs-tp2.md`, agrupadas por sección.
+Lista limpia de tareas que todavía faltan según `consignas-tp2-checklist.md`.  
+Las tareas ya implementadas fueron eliminadas para que esto funcione como tablero de ejecución.
 
-## Arquitectura y Navegación
+## Entrega y deploy
 
-- [x] 01 - Diseñar `Sidebar` y `Layout` — Definir estructura, comportamiento fijo y área de contenido principal.
-- [x] 02 - Implementar componente `Sidebar.jsx` — Crear componente React reutilizable e integrarlo en `layout/Layout.jsx`.
-- [x] 03 - Añadir logo del equipo y menú jerárquico — Incluir asset del logo, items de navegación y submenús.
-- [x] 04 - Hacer `Sidebar` responsive y fija — Comportamiento en mobile (colapsable) y persistente en escritorio.
+1. [ ] Publicar en la pestaña **Entrega TP2** el link al repositorio.
+2. [ ] Publicar en la pestaña **Entrega TP2** el link a la web desplegada en Vercel.
+3. [ ] Confirmar deploy final en Vercel.
+4. [ ] Actualizar en el README el enlace final al proyecto desplegado.
 
-## Vistas y Componentes Principales
+## Galería y Lightbox
 
-- [x] 05 - Agregar animaciones de entrada y transiciones suaves — Definir patrón (CSS/Framer Motion), aplicarlas a tarjetas y vistas.
-- [x] 06 - Implementar `ProgressBar` animada — Componente reutilizable para mostrar el stack técnico en `MemberPage.jsx`.
-- [x] 07 - Crear `Carousel` de proyectos con controles manuales — Componente accesible con al menos 3 proyectos y botones prev/next.
-- [x] 08 - Desarrollar `TechStack` con >=5 iconos y efectos visuales — Diseñar íconos, layout y microinteracciones (hover/entrada).
-- [x] 09 - Añadir `SocialButtons` con efectos hover avanzados — Botones para redes con cambios de color, escala o sombra.
+5. [ ] Implementar zoom funcional dentro del Lightbox.
+6. [ ] Verificar manualmente que el Lightbox soporte zoom, navegación interna y cierre con `ESC`.
 
-## Lógica de Datos e Integración
+## Bitácora de proyecto
 
-- [X] 10 - Crear `data/sample.json` con 20 objetos — Definir esquema (id, nombre, role, avatar, proyectos, tags, images).
-- [X] 11 - Implementar componente `JsonExplorer` — Cargar y renderizar el JSON local dinámicamente en una vista paginada.
-- [X] 12 - Añadir filtrado y buscador en tiempo real — Input debounced que filtra por nombre, stack o tags y actualiza la vista.
-- [X] 13 - Integrar API pública asíncrona — Elegir una API pública (ej. GitHub Users / JSONPlaceholder) y consumirla con fetch/axios.
-- [X] 14 - Gestionar estados `loading` y `error` — Hook o patrón reutilizable para mostrar spinners y mensajes de error.
-- [X] 15 - Implementar paginación (Anterior / Siguiente) — Componente que muestra la posición actual y permite navegar páginas.
-- [X] 16 - Crear `GalleryGrid` visualizador de imágenes — Grid responsive que usa las imágenes de los objetos o de la API.
-- [X] 17 - Implementar `Lightbox` con zoom, navegación y cierre con `ESC` — Overlay con soporte para teclas y controles.
+7. [ ] Documentar roles de los integrantes.
+8. [ ] Documentar flujo de trabajo usado: GitFlow, Trello o herramienta equivalente.
 
----
-- [x] 18 - Actualizar README.md
+## Árbol de renderizado
+
+9. [ ] Incluir representación gráfica o esquemática del árbol de renderizado.
+10. [ ] Identificar claramente el componente raíz `App`.
+11. [ ] Identificar componentes superiores como `Layout` y `Sidebar`.
+12. [ ] Detallar componentes hijos: cards, buttons, modals, páginas y secciones.
+13. [ ] Mostrar la jerarquía completa de la aplicación.
+
+## README.md crítico
+
+14. [ ] Completar título del proyecto con link al deploy de Vercel.
+15. [ ] Actualizar la estructura de archivos para que coincida con el proyecto real.
+16. [ ] Agregar guía de estilos.
+17. [ ] Documentar paleta de colores con valores hexadecimales.
+18. [ ] Documentar tipografías utilizadas con enlaces.
+19. [ ] Explicar funciones dinámicas implementadas con capturas.
+20. [ ] Explicar componentes clave con capturas.
+21. [ ] Documentar la evolución del proyecto con mejoras y cambios realizados.
+22. [ ] Agregar capturas que muestren el progreso del proyecto.
+
+## Uso de IA
+
+23. [ ] Explicar qué textos fueron generados o asistidos con IA.
+24. [ ] Explicar en qué problemas de lógica ayudó la IA.
+25. [ ] Explicar en qué problemas de debugging ayudó la IA.
+26. [ ] Especificar modelo usado para avatares o logos.
+27. [ ] Especificar criterio de prompt usado para recursos gráficos.
+28. [ ] Dejar claro que la IA fue asistente y que la autoría del proyecto se mantiene en el equipo.
+
