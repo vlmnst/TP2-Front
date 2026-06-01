@@ -62,7 +62,7 @@
 37. [x] Explicar funciones dinámicas implementadas con capturas.
 38. [x] Explicar componentes clave con capturas.
 39. [x] Documentar la evolución del proyecto con mejoras y cambios realizados.
-40. [ ] Agregar capturas que muestren el progreso del proyecto.
+40. [x] Agregar capturas que muestren el progreso del proyecto.
 
 ## Uso de IA ( README.md)
 
