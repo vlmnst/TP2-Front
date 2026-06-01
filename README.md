@@ -11,6 +11,7 @@
 Este proyecto es la version migrada del TP1 hacia una aplicacion moderna con React y Vite. La interfaz mantiene una estetica de dashboard con una `Sidebar` fija, navegacion interna y paginas individuales para cada integrante del equipo.
 
 La app incluye:
+
 - rutas con React Router
 - perfiles dinamicos por integrante
 - explorador JSON local con busqueda y filtros
@@ -22,19 +23,20 @@ La app incluye:
 
 ## Integrantes y Roles
 
-| Nombre completo   | Rol Principal                    | GitHub                                             |
-| ----------------- | -------------------------------- | -------------------------------------------------- |
-| Cristian Nicoletti| Desarrollo & Documentación       | [@NicoCris](https://github.com/NicoCris)           |
-| Valeria Mansueto  | Scrum Master / Integración       | [@vlmnst](https://github.com/vlmnst)               |
-| Antonella Masini  | UI/UX & Desarrollo Frontend      | [@Antocba](https://github.com/Antocba)             |
-| Guillermo Novillo | Desarrollo                       | [@guinovi](https://github.com/guinovi)             |
-| Facundo Bascur    | Desarrollo                       | [@FacundoBascur](https://github.com/FacundoBascur) |
+| Nombre completo    | Rol Principal               | GitHub                                             |
+| ------------------ | --------------------------- | -------------------------------------------------- |
+| Cristian Nicoletti | Desarrollo & Documentación  | [@NicoCris](https://github.com/NicoCris)           |
+| Valeria Mansueto   | Scrum Master / Integración  | [@vlmnst](https://github.com/vlmnst)               |
+| Antonella Masini   | UI/UX & Desarrollo Frontend | [@Antocba](https://github.com/Antocba)             |
+| Guillermo Novillo  | Desarrollo                  | [@guinovi](https://github.com/guinovi)             |
+| Facundo Bascur     | Desarrollo                  | [@FacundoBascur](https://github.com/FacundoBascur) |
 
 ---
 
 ## Flujo de Trabajo
 
-Durante el desarrollo de este proyecto, utilizamos **GitFlow** como estrategia principal y única de control de versiones. 
+Durante el desarrollo de este proyecto, utilizamos **GitFlow** como estrategia principal y única de control de versiones.
+
 - **`main`**: Contiene el código estable de producción y es la rama que se despliega en Vercel.
 - **`desa` / `develop`**: Rama de integración donde se unen todas las características antes de pasar a producción.
 - **Ramas por número de tarea (`feature/*`)**: Utilizadas por cada integrante para desarrollar funcionalidades. Estas ramas se crearon siempre partiendo del **número de tarea o issue** estipulado en `tareas.md` (como por ejemplo las ramas `18-readme`, `23-zoom` o `27-arbol`) para mantener la trazabilidad de cada cambio antes de su Pull Request hacia `desa`.
@@ -151,17 +153,17 @@ Durante el desarrollo de este proyecto, utilizamos **GitFlow** como estrategia p
 
 ### Paleta de colores
 
-| Uso | Variable CSS | Hex / valor |
-| --- | --- | --- |
-| Texto principal | `--color-ink` | `#1f2528` |
-| Texto secundario | `--color-muted` | `#657076` |
-| Fondo general | `--color-paper` | `#f4f6f5` |
-| Superficies/tarjetas | `--color-surface` | `#ffffff` |
-| Bordes | `--color-line` | `#dce2df` |
-| Primario verde | `--color-primary` | `#2f7a5f` |
-| Primario oscuro | `--color-primary-dark` | `#235d49` |
-| Acento coral | `--color-coral` | `#c4513b` |
-| Acento dorado | `--color-gold` | `#a35f16` |
+| Uso                  | Variable CSS           | Hex / valor |
+| -------------------- | ---------------------- | ----------- |
+| Texto principal      | `--color-ink`          | `#1f2528`   |
+| Texto secundario     | `--color-muted`        | `#657076`   |
+| Fondo general        | `--color-paper`        | `#f4f6f5`   |
+| Superficies/tarjetas | `--color-surface`      | `#ffffff`   |
+| Bordes               | `--color-line`         | `#dce2df`   |
+| Primario verde       | `--color-primary`      | `#2f7a5f`   |
+| Primario oscuro      | `--color-primary-dark` | `#235d49`   |
+| Acento coral         | `--color-coral`        | `#c4513b`   |
+| Acento dorado        | `--color-gold`         | `#a35f16`   |
 
 ### Tipografias
 
@@ -177,15 +179,15 @@ Durante el desarrollo de este proyecto, utilizamos **GitFlow** como estrategia p
 
 ## Funciones dinamicas y componentes clave
 
-| Funcionalidad | Implementacion | Evidencia |
-| --- | --- | --- |
-| Navegacion SPA | React Router con `RouterProvider`, `Layout`, `Sidebar` y `Outlet`. | Ruta `/arquitectura` y menu lateral. |
-| Perfiles dinamicos | `MemberPage` busca cada integrante por `memberId` y renderiza secciones reutilizables. | `src/pages/MemberPage.jsx` |
-| Buscador JSON | `JsonExplorer` filtra `applicant.json` con busqueda, rol, skill y debounce. | `src/pages/JsonExplorer.jsx` |
-| API externa | `MetPage` consume la API publica del Museo MET con loading, error, filtros y paginacion. | `src/pages/MetPage.jsx` |
-| Galeria + Lightbox | `GalleryPage` abre `Lightbox` con zoom, navegacion interna y cierre con `Esc`. | `src/pages/GalleryPage.jsx` |
-| Carrusel de proyectos | `SectionProjects` permite recorrer proyectos con controles manuales. | `src/components/SectionProjects.jsx` |
-| Arbol de renderizado | `ArchitecturePage` muestra la jerarquia completa de componentes. | Ruta `/arquitectura` |
+| Funcionalidad         | Implementacion                                                                           | Evidencia                            |
+| --------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
+| Navegacion SPA        | React Router con `RouterProvider`, `Layout`, `Sidebar` y `Outlet`.                       | Ruta `/arquitectura` y menu lateral. |
+| Perfiles dinamicos    | `MemberPage` busca cada integrante por `memberId` y renderiza secciones reutilizables.   | `src/pages/MemberPage.jsx`           |
+| Buscador JSON         | `JsonExplorer` filtra `applicant.json` con busqueda, rol, skill y debounce.              | `src/pages/JsonExplorer.jsx`         |
+| API externa           | `MetPage` consume la API publica del Museo MET con loading, error, filtros y paginacion. | `src/pages/MetPage.jsx`              |
+| Galeria + Lightbox    | `GalleryPage` abre `Lightbox` con zoom, navegacion interna y cierre con `Esc`.           | `src/pages/GalleryPage.jsx`          |
+| Carrusel de proyectos | `SectionProjects` permite recorrer proyectos con controles manuales.                     | `src/components/SectionProjects.jsx` |
+| Arbol de renderizado  | `ArchitecturePage` muestra la jerarquia completa de componentes.                         | Ruta `/arquitectura`                 |
 
 ### Capturas de funcionalidades
 
@@ -201,18 +203,18 @@ Durante el desarrollo de este proyecto, utilizamos **GitFlow** como estrategia p
 
 ## Componentes principales
 
-| Componente | Responsabilidad |
-| --- | --- |
-| `Layout` | Define la estructura general del dashboard: Sidebar, topbar, hero contextual, contenido y footer. |
-| `Sidebar` | Organiza la navegacion principal, submenu de integrantes y accesos a exploracion. |
-| `MemberCard` | Tarjeta de acceso rapido a cada integrante desde la Home. |
-| `ProfileAside` | Panel lateral del perfil con avatar, datos y redes sociales. |
-| `SectionRenderer` | Decide que seccion renderizar segun el tipo de dato del perfil. |
-| `ProgressBar` | Representa habilidades tecnicas mediante barras animadas. |
-| `TechStack` | Muestra tecnologias con iconos y efectos visuales. |
-| `Lightbox` | Visualizador modal de imagenes con interaccion por teclado. |
-| `Pagination` | Navegacion anterior/siguiente para listados paginados. |
-| `MetArtworkModal` | Modal de detalle para obras obtenidas desde la API del MET. |
+| Componente        | Responsabilidad                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------- |
+| `Layout`          | Define la estructura general del dashboard: Sidebar, topbar, hero contextual, contenido y footer. |
+| `Sidebar`         | Organiza la navegacion principal, submenu de integrantes y accesos a exploracion.                 |
+| `MemberCard`      | Tarjeta de acceso rapido a cada integrante desde la Home.                                         |
+| `ProfileAside`    | Panel lateral del perfil con avatar, datos y redes sociales.                                      |
+| `SectionRenderer` | Decide que seccion renderizar segun el tipo de dato del perfil.                                   |
+| `ProgressBar`     | Representa habilidades tecnicas mediante barras animadas.                                         |
+| `TechStack`       | Muestra tecnologias con iconos y efectos visuales.                                                |
+| `Lightbox`        | Visualizador modal de imagenes con interaccion por teclado.                                       |
+| `Pagination`      | Navegacion anterior/siguiente para listados paginados.                                            |
+| `MetArtworkModal` | Modal de detalle para obras obtenidas desde la API del MET.                                       |
 
 ---
 
@@ -230,7 +232,7 @@ Cambios principales respecto del TP1:
 
 ### Capturas de evolucion
 
-![Landing migrada a dashboard React](public/img/readme-capturas/landing.png)
+![Landing migrada a dashboard React](public/img/readme-capturas/landing-v2.png)
 
 ![Cambio visual en perfil de Nico](public/img/readme-capturas/Nico-cambioDeEstilo.png)
 
@@ -332,14 +334,14 @@ Este TP2 es la migracion del TP1 hacia una estructura mas modular y mantenible. 
 
 La inteligencia artificial se uso como asistente de trabajo: ayudo a acelerar revisiones, proponer alternativas y detectar problemas, pero las decisiones finales, la seleccion de contenido, la integracion del codigo y la validacion del proyecto fueron realizadas por el equipo.
 
-| Area | Herramienta/modelo | Uso concreto |
-| --- | --- | --- |
-| Redaccion y documentacion | ChatGPT / Claude Sonnet | Asistencia para ordenar el README, mejorar explicaciones tecnicas, redactar la justificacion de migracion y estructurar el arbol de renderizado. |
-| Refactorizacion de componentes | GitHub Copilot / Claude Sonnet | Sugerencias para dividir vistas en componentes reutilizables como `Layout`, `Sidebar`, `SectionRenderer`, `ProgressBar`, `Lightbox` y `Pagination`. |
-| Logica React | ChatGPT / Claude Sonnet | Apoyo conceptual para `useState`, `useEffect`, renderizado condicional, manejo de rutas con React Router, filtros en tiempo real y paginacion. |
-| Debugging | ChatGPT / Claude Sonnet | Revision de errores de importacion, problemas de rutas, estados de carga/error, comportamiento del Lightbox y ajustes de responsive design. |
-| Estilos e interacciones | ChatGPT | Consulta de patrones para CSS 3D, transiciones, animaciones, hover states, barras de progreso y microinteracciones. |
-| Recursos graficos | No se registro un modelo generativo especifico en el repo | El logo final corresponde a un asset local del proyecto (`iftslogo.png`). Los avatares/imagenes finales fueron integrados como recursos del equipo. Si algun integrante genero un avatar con IA fuera del repo, debe registrar el modelo exacto usado antes de la entrega. |
+| Area                           | Herramienta/modelo                                        | Uso concreto                                                                                                                                                                                                                                                               |
+| ------------------------------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Redaccion y documentacion      | ChatGPT / Claude Sonnet                                   | Asistencia para ordenar el README, mejorar explicaciones tecnicas, redactar la justificacion de migracion y estructurar el arbol de renderizado.                                                                                                                           |
+| Refactorizacion de componentes | GitHub Copilot / Claude Sonnet                            | Sugerencias para dividir vistas en componentes reutilizables como `Layout`, `Sidebar`, `SectionRenderer`, `ProgressBar`, `Lightbox` y `Pagination`.                                                                                                                        |
+| Logica React                   | ChatGPT / Claude Sonnet                                   | Apoyo conceptual para `useState`, `useEffect`, renderizado condicional, manejo de rutas con React Router, filtros en tiempo real y paginacion.                                                                                                                             |
+| Debugging                      | ChatGPT / Claude Sonnet                                   | Revision de errores de importacion, problemas de rutas, estados de carga/error, comportamiento del Lightbox y ajustes de responsive design.                                                                                                                                |
+| Estilos e interacciones        | ChatGPT                                                   | Consulta de patrones para CSS 3D, transiciones, animaciones, hover states, barras de progreso y microinteracciones.                                                                                                                                                        |
+| Recursos graficos              | No se registro un modelo generativo especifico en el repo | El logo final corresponde a un asset local del proyecto (`iftslogo.png`). Los avatares/imagenes finales fueron integrados como recursos del equipo. Si algun integrante genero un avatar con IA fuera del repo, debe registrar el modelo exacto usado antes de la entrega. |
 
 ### Textos asistidos con IA
 
